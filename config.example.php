@@ -2,5 +2,8 @@
 
 namespace BCLib\PrimoClient;
 
-define(__NAMESPACE__ . '\APIKEY', 'l7xx8e4a4c4fa35046bfac7351526d930f09');
-define(__NAMESPACE__ . '\GATEWAY', 'https://api-na.hosted.exlibrisgroup.com');
+// API key from Ex Libris Developer Portal.
+const APIKEY = 'l7xx38c6a1a3043974262e81a81fb7475ba9';
+
+// Your API gateway, from Ex Libris Developer Portal.
+const GATEWAY = 'https://api-na.hosted.exlibrisgroup.com';

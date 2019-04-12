@@ -4,7 +4,7 @@
 namespace BCLib\PrimoClient\Exceptions;
 
 
-class InvalidArgumentException
+class InvalidArgumentException extends \InvalidArgumentException
 {
 
 }

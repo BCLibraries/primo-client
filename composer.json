@@ -1,0 +1,29 @@
+{
+  "name": "bclibraries/primo-client",
+  "description": "client for Ex Libris' Primo API",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ben Florin",
+      "email": "benjamin.florin@bc.edu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BCLib\\PrimoClient\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "php-http/curl-client": "^2.0",
+    "guzzlehttp/psr7": "^1.5",
+    "php-http/message": "^1.7",
+    "guzzlehttp/guzzle": "^6.3",
+    "php-http/guzzle6-adapter": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7",
+    "roave/security-advisories": "dev-master"
+  }
+}
