@@ -21,6 +21,21 @@ class Query
      */
     private $value;
 
+    public function __construct(string $field, string $precision, string $value)
+    {
+        $this->validateField($field);
+        $this->validatePrecision($precision);
+
+        $this->field = $field;
+        $this->precision = $precision;
+        $this->value = $value;
+    }
+
+    public function __toString()
+    {
+        return "{$this->field},{$this->precision},{$this->value}";
+    }
+
     public const FIELD_ANY = 'any';
     public const FIELD_TITLE = 'title';
     public const FIELD_CREATOR = 'creator';
@@ -44,21 +59,6 @@ class Query
         self::PRECISION_CONTAINS,
         self::PRECISION_BEGINS_WITH
     ];
-
-    public function __construct(string $field, string $precision, string $value)
-    {
-        $this->validateField($field);
-        $this->validatePrecision($precision);
-
-        $this->field = $field;
-        $this->precision = $precision;
-        $this->value = $value;
-    }
-
-    public function __toString()
-    {
-        return "{$this->field},{$this->precision},{$this->value}";
-    }
 
     private function validateField(string $field): void
     {

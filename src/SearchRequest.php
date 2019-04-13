@@ -21,18 +21,18 @@ class SearchRequest
     ];
 
     public function __construct(
-        string $apikey,
-        string $vid,
-        string $tab,
-        string $scope,
         Query $query,
-        string $inst = null
+        string $vid = Config::DEFAULT_VID,
+        string $tab = Config::DEFAULT_TAB,
+        string $scope = Config::DEFAULT_SCOPE,
+        string $apikey = Config::APIKEY,
+        string $inst = Config::DEFAULT_INST
     ) {
+        $this->params['q'] = (string)$query;
         $this->params['apikey'] = $apikey;
         $this->params['vid'] = $vid;
         $this->params['tab'] = $tab;
         $this->params['scope'] = $scope;
-        $this->params['q'] = (string)$query;
         $this->params['inst'] = $inst;
     }
 
@@ -96,7 +96,7 @@ class SearchRequest
             throw new InvalidArgumentException('qInclude facets must be exact');
         }
         $this->prepMultiParam('qInclude');
-        $this->params['qInclude'] .= (string)$facet;
+        $this->params['qInclude'] .= $facet;
         return $this;
     }
 
@@ -106,7 +106,7 @@ class SearchRequest
             throw new InvalidArgumentException('qExclude facets must be exact');
         }
         $this->prepMultiParam('qExclude');
-        $this->params['qExclude'] .= (string)$facet;
+        $this->params['qExclude'] .= $facet;
         return $this;
     }
 
@@ -116,7 +116,7 @@ class SearchRequest
             throw new InvalidArgumentException('multiFacets facets must not be exact');
         }
         $this->prepMultiParam('multiFacets');
-        $this->params['multiFacets'] .= (string)$facet;
+        $this->params['multiFacets'] .= $facet;
         return $this;
     }
 
@@ -132,7 +132,7 @@ class SearchRequest
 
     private function prepMultiParam(string $name): void
     {
-        if (! isset($this->params[$name])) {
+        if (!isset($this->params[$name])) {
             $this->params[$name] = '';
         } else {
             $this->params[$name] .= '|,|';

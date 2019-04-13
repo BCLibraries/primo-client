@@ -2,8 +2,7 @@
 
 namespace BCLib\PrimoClient;
 
-require_once __DIR__ . '/../config.php';
-require_once __DIR__ . '/../vendor/autoload.php';
+use GuzzleHttp\Client;
 
 class PrimoClient
 {
@@ -17,9 +16,16 @@ class PrimoClient
         $this->client = $client;
     }
 
+    public static function build(string $gateway_base_uri = Config::GATEWAY): PrimoClient
+    {
+        $guzzle = new Client(['base_uri' => $gateway_base_uri]);
+        $http_client = new HttpClient($guzzle);
+        return new PrimoClient($http_client);
+    }
+
     public function search(SearchRequest $search_request)
     {
-        $uri = GATEWAY . $search_request->url();
-        $json = $this->client->sendRequest($uri);
+        $uri = $search_request->url();
+        $json = $this->client->get($uri);
     }
 }

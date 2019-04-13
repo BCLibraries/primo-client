@@ -29,11 +29,7 @@ class SearchRequestTest extends TestCase
         $query->method('__toString')
             ->willReturn('any,contains,otters');
 
-        $this->request = new SearchRequest($apikey,
-            $vid,
-            $tab,
-            $scope,
-            $query);
+        $this->request = new SearchRequest($query, $vid, $tab, $scope, $apikey);
 
         $query_output = 'any%2Ccontains%2Cotters';
         $this->expected_url = "/primo/v1/search?apikey=$apikey&vid=$vid&tab=$tab&scope=$scope&q=$query_output";
