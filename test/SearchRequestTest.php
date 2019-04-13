@@ -1,6 +1,8 @@
 <?php
 
+use BCLib\PrimoClient\Exceptions\InvalidArgumentException as InvalidArgumentExceptionAlias;
 use BCLib\PrimoClient\Query;
+use BCLib\PrimoClient\QueryFacet;
 use BCLib\PrimoClient\SearchRequest;
 use PHPUnit\Framework\TestCase;
 
@@ -86,18 +88,29 @@ class SearchRequestTest extends TestCase
 
     public function testBadSortThrowsException(): void
     {
-        $this->expectException(\BCLib\PrimoClient\Exceptions\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentExceptionAlias::class);
         $this->request->sort('NOTASORT');
     }
 
     public function testSettersAreFluent(): void
     {
+        $f1 = $this->createMock(QueryFacet::class);
+        $f1->method('isExact')
+            ->willReturn(true);
+
+        $f2 = $this->createMock(QueryFacet::class);
+        $f2->method('isExact')
+            ->willReturn(false);
+
         $return = $this->request->conVoc(false)
             ->getMore(true)
             ->pcAvailability(false)
             ->offset(12)
             ->limit(4)
-            ->sort(SearchRequest::SORT_DATE);
+            ->sort(SearchRequest::SORT_DATE)
+            ->include($f1)
+            ->exclude($f1)
+            ->multiFacet($f2);
         $this->assertEquals($this->request, $return);
     }
 
@@ -112,4 +125,65 @@ class SearchRequestTest extends TestCase
     {
         $this->assertEquals($this->request->url(), (string)$this->request);
     }
+
+    public function testAddingNonExactIncludeFacetThrowsException(): void
+    {
+        $this->expectException(InvalidArgumentExceptionAlias::class);
+        $facet = $this->createMock(QueryFacet::class);
+        $facet->method('isExact')
+            ->willReturn(false);
+        $this->request->include($facet);
+    }
+
+    public function testAddingNonExactExcludeFacetThrowsException(): void
+    {
+        $this->expectException(InvalidArgumentExceptionAlias::class);
+        $facet = $this->createMock(QueryFacet::class);
+        $facet->method('isExact')
+            ->willReturn(false);
+        $this->request->include($facet);
+    }
+
+    public function testAddingExactMultiFacetThrowsException(): void
+    {
+        $this->expectException(InvalidArgumentExceptionAlias::class);
+        $facet = $this->createMock(QueryFacet::class);
+        $facet->method('isExact')
+            ->willReturn(true);
+        $this->request->multiFacet($facet);
+    }
+
+    public function testIncludeFacetSetCorrectly(): void
+    {
+        $f1 = $this->createMock(QueryFacet::class);
+        $f1->method('isExact')->willReturn(true);
+        $f1->method('__toString')->willReturn('facet1');
+        $this->request->include($f1);
+        $expected = $this->expected_url. '&qInclude=facet1';
+        $this->assertEquals($expected, $this->request->url());
+
+        $f2 = $this->createMock(QueryFacet::class);
+        $f2->method('isExact')->willReturn(true);
+        $f2->method('__toString')->willReturn('facet2');
+        $this->request->include($f2);
+        $expected = $this->expected_url. '&qInclude=facet1%7C%2C%7Cfacet2';
+        $this->assertEquals($expected, $this->request->url());
+    }
+
+    public function testMultiFacetSetCorrectly(): void
+{
+    $f1 = $this->createMock(QueryFacet::class);
+    $f1->method('isExact')->willReturn(false);
+    $f1->method('__toString')->willReturn('facet1');
+    $this->request->multiFacet($f1);
+    $expected = $this->expected_url. '&multiFacets=facet1';
+    $this->assertEquals($expected, $this->request->url());
+
+    $f2 = $this->createMock(QueryFacet::class);
+    $f2->method('isExact')->willReturn(false);
+    $f2->method('__toString')->willReturn('facet2');
+    $this->request->multiFacet($f2);
+    $expected = $this->expected_url. '&multiFacets=facet1%7C%2C%7Cfacet2';
+    $this->assertEquals($expected, $this->request->url());
+}
 }

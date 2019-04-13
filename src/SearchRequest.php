@@ -39,6 +39,7 @@ class SearchRequest
     public function url($version = 'v1'): string
     {
         $params = array_filter($this->params, [$this, 'isSet']);
+        $facets = array_filter($this->params, [$this, 'isSet']);
         return "/primo/$version/search?" . http_build_query($params);
     }
 
@@ -89,13 +90,52 @@ class SearchRequest
         return $this;
     }
 
+    public function include(QueryFacet $facet)
+    {
+        if (!$facet->isExact()) {
+            throw new InvalidArgumentException('qInclude facets must be exact');
+        }
+        $this->prepMultiParam('qInclude');
+        $this->params['qInclude'] .= (string)$facet;
+        return $this;
+    }
+
+    public function exclude(QueryFacet $facet)
+    {
+        if (!$facet->isExact()) {
+            throw new InvalidArgumentException('qExclude facets must be exact');
+        }
+        $this->prepMultiParam('qExclude');
+        $this->params['qExclude'] .= (string)$facet;
+        return $this;
+    }
+
+    public function multiFacet(QueryFacet $facet)
+    {
+        if ($facet->isExact()) {
+            throw new InvalidArgumentException('multiFacets facets must not be exact');
+        }
+        $this->prepMultiParam('multiFacets');
+        $this->params['multiFacets'] .= (string)$facet;
+        return $this;
+    }
+
     public function __toString()
     {
         return $this->url();
     }
 
-    private function isSet($value)
+    private function isSet($value): bool
     {
         return $value !== null;
+    }
+
+    private function prepMultiParam(string $name): void
+    {
+        if (! isset($this->params[$name])) {
+            $this->params[$name] = '';
+        } else {
+            $this->params[$name] .= '|,|';
+        }
     }
 }
