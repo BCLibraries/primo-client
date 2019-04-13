@@ -7,12 +7,19 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 class PrimoClient
 {
-    public function __construct()
+    /**
+     * @var HttpClient
+     */
+    private $client;
+
+    public function __construct(HttpClient $client)
     {
+        $this->client = $client;
     }
 
-    public function search()
+    public function search(SearchRequest $search_request)
     {
-
+        $uri = GATEWAY . $search_request->url();
+        $json = $this->client->sendRequest($uri);
     }
 }
