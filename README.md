@@ -14,8 +14,18 @@ Primo Client is currently a 0.* release, so things might change drastically with
 
 ## Usage
 
+Create a configuration hash and pass it to `PrimoClient::build()` to 
+instantiate a client.
+
 ```php
-$primo = \BCLib\PrimoClient\PrimoClient::build();
+$config = [
+    'apikey' => 'l7xx38c6a1a3043974262e81a81fb7475ba9',
+    'gateway' => 'https://api-na.hosted.exlibrisgroup.com',
+    'vid' => 'my_vid',
+    'tab' => 'the_tab',
+    'scope' => 'mylib'
+];
+$primo = \BCLib\PrimoClient\PrimoClient::build($config);
 $result = $primo->search('otters');
 ```
 

@@ -47,11 +47,11 @@ class SearchRequest
 
     public function __construct(
         Query $query,
-        string $vid = Config::DEFAULT_VID,
-        string $tab = Config::DEFAULT_TAB,
-        string $scope = Config::DEFAULT_SCOPE,
-        string $apikey = Config::APIKEY,
-        string $inst = Config::DEFAULT_INST
+        string $vid,
+        string $tab,
+        string $scope,
+        string $apikey,
+        string $inst = null
     ) {
         $this->params['apikey'] = $apikey;
         $this->params['vid'] = $vid;

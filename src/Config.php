@@ -2,14 +2,51 @@
 
 namespace BCLib\PrimoClient;
 
-require_once __DIR__ . '/../config.php';
-
 class Config
 {
-    public const APIKEY = APIKEY;
-    public const GATEWAY = GATEWAY;
-    public const DEFAULT_VID = DEFAULT_VID;
-    public const DEFAULT_SCOPE = DEFAULT_SCOPE;
-    public const DEFAULT_INST = DEFAULT_INST;
-    public const DEFAULT_TAB = DEFAULT_TAB;
+    /**
+     * @var string
+     */
+    private $apikey;
+
+    /**
+     * @var string
+     */
+    private $gateway;
+
+    /**
+     * @var string
+     */
+    private $vid;
+
+    /**
+     * @var string
+     */
+    private $tab;
+
+    /**
+     * @var string
+     */
+    private $scope;
+
+    /**
+     * @var string
+     */
+    private $inst;
+
+    public function __construct(
+        string $apikey,
+        string $gateway,
+        string $vid,
+        string $tab,
+        string $scope,
+        string $inst = null
+    ) {
+        $this->apikey = $apikey;
+        $this->gateway = $gateway;
+        $this->vid = $vid;
+        $this->tab = $tab;
+        $this->scope = $scope;
+        $this->inst = $inst;
+    }
 }
