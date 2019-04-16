@@ -7,25 +7,29 @@ use GuzzleHttp\Client;
 class PrimoClient
 {
     /**
-     * @var HttpClient
+     * @var ApiClient
      */
     private $client;
 
-    public function __construct(HttpClient $client)
+    public function __construct(ApiClient $client)
     {
         $this->client = $client;
+        $this->search();
     }
 
     public static function build(string $gateway_base_uri = Config::GATEWAY): PrimoClient
     {
         $guzzle = new Client(['base_uri' => $gateway_base_uri]);
-        $http_client = new HttpClient($guzzle);
+        $http_client = new ApiClient($guzzle);
         return new PrimoClient($http_client);
     }
 
-    public function search(SearchRequest $search_request)
+    /**
+     * @param string $bar
+     * @param mixed ...$parameters
+     */
+    public function search(...$parameters)
     {
-        $uri = $search_request->url();
-        $json = $this->client->get($uri);
+
     }
 }

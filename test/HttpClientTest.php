@@ -1,7 +1,7 @@
 <?php
 
 use BCLib\PrimoClient\Exceptions\BadAPIResponseException;
-use BCLib\PrimoClient\HttpClient;
+use BCLib\PrimoClient\ApiClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Handler\MockHandler;
@@ -20,7 +20,7 @@ class HttpClientTest extends TestCase
             new Response(200, [], json_encode($expected))
         ]);
         $handler = HandlerStack::create($mock);
-        $http_client = new HttpClient(new Client(['handler' => $handler]));
+        $http_client = new ApiClient(new Client(['handler' => $handler]));
         $response = $http_client->get('/');
 
 
@@ -36,7 +36,7 @@ class HttpClientTest extends TestCase
             new BadResponseException('test', $bad_request)
         ]);
         $handler = HandlerStack::create($mock);
-        $http_client = new HttpClient(new Client(['handler' => $handler]));
+        $http_client = new ApiClient(new Client(['handler' => $handler]));
         $response = $http_client->get('/');
     }
 }
