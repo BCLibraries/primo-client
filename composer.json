@@ -1,6 +1,6 @@
 {
   "name": "bclibraries/primo-client",
-  "description": "client for Ex Libris' Primo API",
+  "description": "A client for Ex Libris' Primo REST API",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [

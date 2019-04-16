@@ -4,6 +4,21 @@ namespace BCLib\PrimoClient;
 
 use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
 
+/**
+ * Represents the query portion of a Brief Search API call
+ *
+ * Represents a single component of the query ('q') portion of a Brief Search API call.
+ *
+ * Casting the item as a string will return the string representation of the query for
+ * inclusion in an API call
+ *
+ *     $param = "q=$query";
+ *
+ * See https://developers.exlibrisgroup.com/primo/apis/search/ for full API documentation
+ * *
+ * Class Query
+ * @package BCLib\PrimoClient
+ */
 class Query
 {
     /**
@@ -12,15 +27,32 @@ class Query
     private $field;
 
     /**
-     * @var
+     * @var string
      */
     private $precision;
 
     /**
-     * @var
+     * @var string
      */
     private $value;
 
+    /**
+     * Create a query
+     *
+     * $field and $precision can use class constants:
+     *
+     *     $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, 'otters')
+     *
+     * or bare strings:
+     *
+     *     $query = new Query('any', 'contains', 'otters')
+     *
+     * See the Primo Brief Search API documentation for details on query values.
+     *
+     * @param string $field
+     * @param string $precision
+     * @param string $value
+     */
     public function __construct(string $field, string $precision, string $value)
     {
         $this->validateField($field);
@@ -31,17 +63,28 @@ class Query
         $this->value = $value;
     }
 
+    /**
+     * Return string representation of query for inclusion in API call
+     *
+     * @return string
+     */
     public function __toString()
     {
         return "{$this->field},{$this->precision},{$this->value}";
     }
 
+    /**
+     * Valid field names
+     */
     public const FIELD_ANY = 'any';
     public const FIELD_TITLE = 'title';
     public const FIELD_CREATOR = 'creator';
     public const FIELD_SUBJECT = 'sub';
     public const FIELD_TAG = 'usertag';
 
+    /**
+     * Valid precision levels
+     */
     public const PRECISION_EXACT = 'exact';
     public const PRECISION_CONTAINS = 'contains';
     public const PRECISION_BEGINS_WITH = 'begins with';
@@ -60,6 +103,7 @@ class Query
         self::PRECISION_BEGINS_WITH
     ];
 
+    // Input validations
     private function validateField(string $field): void
     {
         if (!in_array($field, self::VALID_FIELDS, true)) {
