@@ -67,6 +67,16 @@ class DocTranslatorTest extends TestCase
         $this->assertEquals($expected_openurlfulltext, $doc->openurl_fulltext);
     }
 
+    public function testMissingLinksReturnEmptyArray(): void
+    {
+        $json = file_get_contents(__DIR__ . '/doc-pci-otters.json');
+        $doc = DocTranslator::translate(json_decode($json, false));
+
+        $this->assertEquals([], $doc->openurl_fulltext);
+        $this->assertEquals([], $doc->openurl);
+        $this->assertEquals([], $doc->link_to_resource);
+    }
+
     public function testParsesHoldings(): void
     {
         $json = file_get_contents(__DIR__ . '/doc-supreme+court.json');

@@ -7,7 +7,7 @@ A client for accessing the [Primo Brief Search RESTful API](https://developers.e
 Use [composer](https://getcomposer.org/) to install Primo-Client.
 
 ```bash
-composer require bclibraries/primo-client:^0.1
+composer require bclibraries/primo-client:^0.2
 ```
 
 Primo Client is currently a 0.* release, so things might change drastically with any minor release.
@@ -26,7 +26,25 @@ $config = [
     'scope' => 'mylib'
 ];
 $primo = \BCLib\PrimoClient\PrimoClient::build($config);
-$result = $primo->search('otters');
+$response = $primo->search('otters');
+```
+
+The JSON structure of a SearchResponse can be accessed directly:
+
+```php
+echo "{$response->json->info->total} total results\n";
+foreach ($response->json->docs as $doc) {
+    echo "{$doc->pnx->display->title[0]}\n";
+}
+```
+
+or through convenience parameters:
+
+```php
+echo "{$response->total} total results\n";
+foreach ($response->docs as $doc) {
+    echo "{$doc->title}\n";
+}
 ```
 
 ### Running tests

@@ -67,6 +67,7 @@ class PrimoClient
     {
         $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, 'otters');
         $request = new SearchRequest($query, DEFAULT_VID, DEFAULT_TAB, DEFAULT_SCOPE, APIKEY);
-        return $this->client->get($request->url());
+        $json = $this->client->get($request->url());
+        return SearchTranslator::translate($json);
     }
 }

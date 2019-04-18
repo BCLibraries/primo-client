@@ -36,9 +36,9 @@ class DocTranslator
             $doc->links[$type] = $doc->links[$type] ?? [];
             $doc->links[$type][] = new Link($link->displayLabel, $link->linkURL, $type);
         }
-        $doc->link_to_resource = $doc->links['linktorsrc'];
-        $doc->openurl = $doc->links['openurl'];
-        $doc->openurl_fulltext = $doc->links['openurlfulltext'];
+        $doc->link_to_resource = $doc->links['linktorsrc'] ?? [];
+        $doc->openurl = $doc->links['openurl'] ?? [];
+        $doc->openurl_fulltext = $doc->links['openurlfulltext'] ?? [];
     }
 
     private static function processHoldings(Doc $doc): void
