@@ -1,0 +1,662 @@
+{
+  "enrichment": {
+    "virtualBrowseObject": {
+      "callNumber": "PZ7.K281346 Do 2008",
+      "isVirtualBrowseEnabled": true,
+      "callNumberBrowseField": "browse_callnumber.0.V2"
+    }
+  },
+  "delivery": {
+    "availabilityLinks": [
+      "detailsGetit1"
+    ],
+    "physicalItemTextCodes": "",
+    "displayLocation": false,
+    "availabilityLinksUrl": [
+      ""
+    ],
+    "link": [
+      {
+        "displayLabel": "openurl",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-04-17T18%3A17%3A01IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com&req_id=&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Do%20unto%20otters&rft.aulast=Fott&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0545092132&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CALMA-BC%3E21438900870001021%3C/ALMA-BC%3E%3Cgrp_id%3E104801096%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft.edition=&rft.pub=&rft.place=Norwalk,%20CT&rft.series={{seriestitle}}&rft.stitle=&svc_dat=viewit&req.language=eng&rft_pqid=&rft_id=info:pmid/&req.skin=bclib_new&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:0"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "inst4opac": "BCL",
+        "linkURL": "",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:1"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "inst4opac": "BCL",
+        "linkURL": "https://proxy-na.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0545092132&issn=/MC.JPG&client=bostonh",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:2"
+      },
+      {
+        "displayLabel": "Permalink to this record",
+        "inst4opac": "BCL",
+        "linkURL": "http://bclib.bc.edu/libsearch/bc/keyword/ALMA-BC21438900870001021",
+        "linkType": "http://purl.org/pnx/linkType/lln02",
+        "@id": "_:3"
+      },
+      {
+        "displayLabel": "Check Here for Additional Information",
+        "inst4opac": "BCL",
+        "linkURL": "http://lib.syndetics.com/index.aspx?isbn=0545092132/index.html&client=bostonh&type=xw12",
+        "linkType": "http://purl.org/pnx/linkType/linktotoc",
+        "@id": "_:4"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-04-17T18%3A17%3A01IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com&req_id=&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=unknown&rft.atitle=&rft.jtitle=&rft.btitle=Do%20unto%20otters&rft.aulast=Fott&rft.auinit=&rft.auinit1=&rft.auinitm=&rft.ausuffix=&rft.au=&rft.aucorp=&rft.volume=&rft.issue=&rft.part=&rft.quarter=&rft.ssn=&rft.spage=&rft.epage=&rft.pages=&rft.artnum=&rft.issn=&rft.eissn=&rft.isbn=0545092132&rft.sici=&rft.coden=&rft_id=info:doi/&rft.object_id=&rft_dat=%3CALMA-BC%3E21438900870001021%3C/ALMA-BC%3E%3Cgrp_id%3E104801096%3C/grp_id%3E%3Coa%3E%3C/oa%3E%3Curl%3E%3C/url%3E&rft.eisbn=&rft.edition=&rft.pub=&rft.place=Norwalk,%20CT&rft.series={{seriestitle}}&rft.stitle=&rft.bici=&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/230822772&rft_id=info:pmid/&rft_id=info:eric/((addata/eric}}&rft_data=ie=01BC_INST:21438900870001021,language=eng&svc_dat=viewit&req.language=eng&rft_pqid=&req.skin=bclib_new&rft_galeid=&rft_cupid=&rft_eruid=&rft_nurid=&rft_ingid=",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:5"
+      },
+      {
+        "displayLabel": "This item in WorldCat®",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.on.worldcat.org/search?queryString=bn:0545092132",
+        "linkType": "http://purl.org/pnx/linkType/linktouc",
+        "@id": "_:6"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "linkURL": "https://proxy-na.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0545092132&issn=/MC.JPG&client=primo",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:7"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "linkURL": "https://proxy-na.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?isbn=0545092132&issn=/MC.JPG&client=bostonh",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:8"
+      }
+    ],
+    "availability": [
+      "available_in_my_institution"
+    ],
+    "additionalLocations": true,
+    "displayedAvailability": "available_in_my_institution",
+    "holding": [
+      {
+        "matchForHoldings": [
+          {
+            "holdingRecord": "852##b",
+            "matchOn": "MainLocation"
+          }
+        ],
+        "subLocationCode": "STACK",
+        "ilsApiId": "01BC_INST21438900870001021",
+        "libraryCode": "ERC",
+        "isValidUser": true,
+        "mainLocation": "ERC",
+        "callNumber": "(PZ7.K281346 Do 2008 )",
+        "adaptorid": "ALMA_01",
+        "organization": "BCL",
+        "holdingURL": "OVP",
+        "@id": "_:0",
+        "availabilityStatus": "available",
+        "subLocation": "Stacks",
+        "holdId": ""
+      }
+    ],
+    "bestlocation": {
+      "matchForHoldings": [
+        {
+          "holdingRecord": "852##b",
+          "matchOn": "MainLocation"
+        }
+      ],
+      "mainLocation": "ERC",
+      "subLocationCode": "STACK",
+      "callNumber": "(PZ7.K281346 Do 2008 )",
+      "organization": "BCL",
+      "libraryCode": "ERC",
+      "@id": "_:0",
+      "availabilityStatus": "available",
+      "subLocation": "Stacks",
+      "holdId": "",
+      "isValidUser": true
+    },
+    "deliveryCategory": [
+      "Alma-P"
+    ],
+    "serviceMode": [
+      "activate"
+    ],
+    "feDisplayOtherLocations": false,
+    "GetIt1": [
+      {
+        "links": [
+          {
+            "isLinktoOnline": false,
+            "displayText": "Almagetit",
+            "hyperlinkText": "",
+            "getItTabText": "alma_tab1_avail",
+            "link": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-04-17T18%3A17%3A01IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-ALMA-BC&req_id=&rft_dat=ie=01BC_INST:21438900870001021,language=eng,view=bclib_new&svc_dat=getit&user_ip=136.167.211.156&rft.number=PZ7.K281346%20Do%202008&rft.series=&rft.kind=STACK&rft.genre=unknown&rft.format=video&req.skin=bclib_new",
+            "@id": "_:0"
+          }
+        ],
+        "category": "Alma-P"
+      }
+    ]
+  },
+  "@rta_link": "http://bc-primo.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/bclib_new?recordInformation=21438900870001021|,|ALMA-BC|,|01BC_INST|,|Alma|,|ALMA-BC21438900870001021|,|$$IBCL$$LERC$$1Stacks$$2(PZ7.K281346 Do 2008 )$$Savailable$$X01BC_INST$$YERC$$ZSTACK$$P1|,|$$IBCL$$Savailable|,|Alma-P|,|BCL|,|01BC_INST:21438900870001021|,|__NO_VALUE__|,|01BC_INST21438900870001021|,|__NO_VALUE__|,|__NO_VALUE__",
+  "context": "L",
+  "adaptor": "Local Search Engine",
+  "pnx": {
+    "delivery": {
+      "institution": [
+        "BCL"
+      ],
+      "delcategory": [
+        "Alma-P"
+      ]
+    },
+    "display": {
+      "identifier": [
+        "ISBN: 0545092132; ISBN: 9780545092135; DVD832 Weston Woods"
+      ],
+      "lds16": [
+        "DVD."
+      ],
+      "creationdate": [
+        "c2008"
+      ],
+      "availinstitution": [
+        "$$IBCL$$Savailable"
+      ],
+      "lds07": [
+        "Norwalk, CT"
+      ],
+      "lds09": [
+        "Weston Woods Studios"
+      ],
+      "subject": [
+        "Golden rule -- Juvenile films; Neighborliness -- Juvenile films; Rabbits -- Juvenile films; Otters -- Juvenile films; Fiction films; Short films; Animated films; Children's films"
+      ],
+      "format": [
+        "1 videodisc (10 min.) : sd., col. ; 4 3/4 in."
+      ],
+      "description": [
+        "Bonus feature: an interview with Laurie Keller.",
+        "Music composed & performed by Rusty Young & Jack Sundrud.",
+        "Voices: Diana Canova, David de Vries, Galen Fott, Jack Sundrud, & Rusty Young.",
+        "Ages 4-8."
+      ],
+      "language": [
+        "eng"
+      ],
+      "availlibrary": [
+        "$$IBCL$$LERC$$1Stacks$$2(PZ7.K281346 Do 2008 )$$Savailable$$X01BC_INST$$YERC$$ZSTACK$$P1"
+      ],
+      "source": [
+        "ALMA-BC"
+      ],
+      "title": [
+        "Do unto otters"
+      ],
+      "type": [
+        "video"
+      ],
+      "relation": [
+        "Do unto otters. Keller, Laurie."
+      ],
+      "contributor": [
+        "Galen Fott",
+        "Diana Canova",
+        "David De Vries 1958-",
+        "Jack Sundrud",
+        "Rusty Young",
+        "Paul R. Gagne 1956-",
+        "Melissa Reilly Ellard",
+        "Laurie Keller",
+        "Scholastic Inc",
+        "Weston Woods Studios"
+      ],
+      "lds50": [
+        "Mr. Rabbit wonders if he will be able to get along with his new neighbors, who are otters, until he is reminded of the golden rule."
+      ],
+      "lds20": [
+        "Includes optional read-along subtitles in English."
+      ],
+      "publisher": [
+        "Norwalk, CT : Weston Woods Studios"
+      ],
+      "availpnx": [
+        "available"
+      ],
+      "lds11": [
+        "99137658835101021"
+      ],
+      "lds10": [
+        "PZ7.K281346 Do 2008"
+      ],
+      "lds34": [
+        "Mr. Rabbit wonders if he will be able to get along with his new neighbors, who are otters, until he is reminded of the golden rule."
+      ],
+      "lds26": [
+        "Scholastic ; Weston Woods ; by Laurie Keller ; adapted, directed, & animated by Galen Fott ; produced by Paul R. Gagne & Melissa Reilly."
+      ]
+    },
+    "control": {
+      "recordid": [
+        "ALMA-BC21438900870001021"
+      ],
+      "sourceid": [
+        "ALMA-BC"
+      ],
+      "ilsapiid": [
+        "01BC_INST21438900870001021"
+      ],
+      "almaid": [
+        "01BC_INST:21438900870001021"
+      ],
+      "originalsourceid": [
+        "01BC_INST"
+      ],
+      "sourceformat": [
+        "MARC21"
+      ],
+      "sourcerecordid": [
+        "21438900870001021"
+      ],
+      "sourcesystem": [
+        "Alma"
+      ]
+    },
+    "sort": {
+      "creationdate": [
+        "2008"
+      ],
+      "author": [
+        "scholastic weston woods by laurie keller adapted directed animated by galen fott produced by paul r gagne melissa reilly"
+      ],
+      "title": [
+        "Do unto otters"
+      ]
+    },
+    "frbr": {
+      "t": [
+        1
+      ],
+      "k1": [
+        "$$Kfott galen$$AA",
+        "$$Kcanova diana$$AA",
+        "$$Kde vries david 1958$$AA",
+        "$$Ksundrud jack$$AA",
+        "$$Kyoung rusty$$AA",
+        "$$Kgagne paul r 1956$$AA",
+        "$$Kellard melissa reilly$$AA",
+        "$$Kkeller laurie$$AA",
+        "$$Kscholastic inc$$AA",
+        "$$Kweston woods studios$$AA"
+      ],
+      "k3": [
+        "$$Kdo unto otters$$AT"
+      ]
+    },
+    "dedup": {
+      "f10": [
+        "weston woods studios"
+      ],
+      "f20": [
+        "99137658835101021"
+      ],
+      "f3": [
+        "0545092132;9780545092135"
+      ],
+      "c2": [
+        "0545092132;9780545092135"
+      ],
+      "f5": [
+        "dountootters"
+      ],
+      "c3": [
+        "dountootters"
+      ],
+      "f6": [
+        "2008"
+      ],
+      "c4": [
+        "2008"
+      ],
+      "f7": [
+        "do unto otters"
+      ],
+      "c5": [
+        "99137658835101021"
+      ],
+      "f8": [
+        "ctu"
+      ],
+      "f9": [
+        "1 videodisc (10 min.) :"
+      ],
+      "t": [
+        1
+      ]
+    },
+    "facets": {
+      "frbrtype": [
+        "6"
+      ],
+      "creatorcontrib": [
+        "Fott, Galen",
+        "Canova, Diana",
+        "De Vries, David, 1958-",
+        "Sundrud, Jack",
+        "Young, Rusty",
+        "Gagne, Paul R., 1956-",
+        "Ellard, Melissa Reilly",
+        "Keller, Laurie",
+        "Scholastic Inc",
+        "Weston Woods Studios"
+      ],
+      "creationdate": [
+        "2008"
+      ],
+      "newrecords": [
+        "20140829_280"
+      ],
+      "rsrctype": [
+        "video"
+      ],
+      "lfc10": [
+        "PZ7"
+      ],
+      "language": [
+        "eng"
+      ],
+      "collection": [
+        "ERC"
+      ],
+      "prefilter": [
+        "video"
+      ],
+      "toplevel": [
+        "available"
+      ],
+      "library": [
+        "ERC"
+      ],
+      "atoz": [
+        "D"
+      ],
+      "lfc09": [
+        "PZ7 .K281346"
+      ],
+      "frbrgroupid": [
+        "104801096"
+      ],
+      "genre": [
+        "Fiction films",
+        "Short films",
+        "Animated films",
+        "Children's films"
+      ],
+      "topic": [
+        "Golden rule\u2013Juvenile films",
+        "Neighborliness\u2013Juvenile films",
+        "Rabbits\u2013Juvenile films",
+        "Otters\u2013Juvenile films"
+      ]
+    },
+    "enrichment": {
+      "classificationlcc": [
+        "PZ7.K281346"
+      ]
+    },
+    "search": {
+      "creationdate": [
+        "2008"
+      ],
+      "subject": [
+        "Golden rule Juvenile films.",
+        "Neighborliness Juvenile films.",
+        "Rabbits Juvenile films.",
+        "Otters Juvenile films.",
+        "Fiction films.",
+        "Short films.",
+        "Animated films.",
+        "Children's films."
+      ],
+      "isbn": [
+        "0545092132",
+        "9780545092135"
+      ],
+      "rsrctype": [
+        "video"
+      ],
+      "lsr14": [
+        "ERC"
+      ],
+      "description": [
+        "Mr. Rabbit wonders if he will be able to get along with his new neighbors, who are otters, until he is reminded of the golden rule."
+      ],
+      "lsr13": [
+        "DVD832"
+      ],
+      "lsr12": [
+        "Bonus feature: an interview with Laurie Keller.",
+        "Music composed & performed by Rusty Young & Jack Sundrud.",
+        "Voices: Diana Canova, David de Vries, Galen Fott, Jack Sundrud, & Rusty Young.",
+        "Mr. Rabbit wonders if he will be able to get along with his new neighbors, who are otters, until he is reminded of the golden rule.",
+        "Ages 4-8.",
+        "DVD.",
+        "Includes optional read-along subtitles in English.",
+        "1 videodisc (10 min.) : sd., col. ;"
+      ],
+      "title": [
+        "Do unto otters"
+      ],
+      "startdate": [
+        "20080101"
+      ],
+      "scope": [
+        "BCL",
+        "ERC",
+        "ALMA-BC"
+      ],
+      "sourceid": [
+        "ALMA-BC"
+      ],
+      "creatorcontrib": [
+        "Scholastic ; Weston Woods ; by Laurie Keller ; adapted, directed, & animated by Galen Fott ; produced by Paul R. Gagne & Melissa Reilly.",
+        "Music composed & performed by Rusty Young & Jack Sundrud.",
+        "Voices: Diana Canova, David de Vries, Galen Fott, Jack Sundrud, & Rusty Young. Galen Fott Diana Canova David De Vries 1958- Jack Sundrud Rusty Young Paul R. Gagne 1956- Melissa Reilly Ellard Laurie Keller",
+        "Fott, Galen.",
+        "Canova, Diana.",
+        "De Vries, David, 1958-",
+        "Sundrud, Jack.",
+        "Young, Rusty.",
+        "Gagne, Paul R., 1956-",
+        "Ellard, Melissa Reilly",
+        "Keller, Laurie.",
+        "Fott, G",
+        "Canova, D",
+        "De Vries, D",
+        "Sundrud, J",
+        "Young, R",
+        "Gagne, P",
+        "Ellard, M",
+        "Keller, L",
+        "Scholastic Inc.",
+        "Weston Woods Studios."
+      ],
+      "lsr26": [
+        "Scholastic ; Weston Woods ; by Laurie Keller ; adapted, directed, & animated by Galen Fott ; produced by Paul R. Gagne & Melissa Reilly."
+      ],
+      "format": [
+        "video"
+      ],
+      "lsr03": [
+        "ALMA-BC21438900870001021"
+      ],
+      "lsr22": [
+        "PZ7.K281346 Do 2008"
+      ],
+      "lsr21": [
+        "STACK"
+      ],
+      "addtitle": [
+        "Do unto otters."
+      ],
+      "lsr20": [
+        "99137658835101021"
+      ],
+      "addsrcrecordid": [
+        "99137658835101021"
+      ],
+      "recordid": [
+        "ALMA-BC21438900870001021"
+      ],
+      "enddate": [
+        "20081231"
+      ],
+      "lsr09": [
+        "Norwalk, CT"
+      ],
+      "lsr08": [
+        "Weston Woods Studios,"
+      ],
+      "lsr06": [
+        "PZ7.K281346 Do 2008",
+        "PZ7.K281346Do2008",
+        "PZ7.K281346",
+        "Do 2008",
+        "Do2008"
+      ],
+      "lsr05": [
+        "230822772",
+        "(OCoLC)ocn230822772"
+      ]
+    },
+    "ranking": {
+      "booster2": [
+        "1"
+      ],
+      "booster1": [
+        "1"
+      ]
+    },
+    "links": {
+      "openurl": [
+        "$$Topenurl_journal"
+      ],
+      "thumbnail": [
+        "$$Tamazon_thumb",
+        "$$Tsyndetics_thumb"
+      ],
+      "lln02": [
+        "$$Tpermalink$$DPermalink to this record"
+      ],
+      "linktotoc": [
+        "$$Tsyndetics_index$$DCheck Here for Additional Information"
+      ],
+      "openurlfulltext": [
+        "$$Topenurlfull_journal"
+      ],
+      "linktouc": [
+        "$$Tworldcat_isbn$$DThis item in WorldCat®"
+      ]
+    },
+    "addata": {
+      "date": [
+        "2008"
+      ],
+      "aulast": [
+        "Fott"
+      ],
+      "cop": [
+        "Norwalk, CT"
+      ],
+      "isbn": [
+        "0545092132",
+        "9780545092135"
+      ],
+      "ristype": [
+        "VIDEO"
+      ],
+      "format": [
+        "book"
+      ],
+      "oclcid": [
+        "230822772"
+      ],
+      "lad07": [
+        "0545092132"
+      ],
+      "lad06": [
+        "null"
+      ],
+      "abstract": [
+        "Mr. Rabbit wonders if he will be able to get along with his new neighbors, who are otters, until he is reminded of the golden rule."
+      ],
+      "aufirst": [
+        "Galen."
+      ],
+      "addau": [
+        "Fott, Galen",
+        "Canova, Diana",
+        "De Vries, David, 1958-",
+        "Sundrud, Jack",
+        "Young, Rusty",
+        "Gagne, Paul R., 1956-",
+        "Ellard, Melissa Reilly",
+        "Keller, Laurie",
+        "Scholastic Inc",
+        "Weston Woods Studios"
+      ],
+      "genre": [
+        "unknown"
+      ],
+      "btitle": [
+        "Do unto otters"
+      ],
+      "risdate": [
+        "c2008."
+      ],
+      "pub": [
+        "Weston Woods Studios"
+      ]
+    },
+    "browse": {
+      "author": [
+        "$$DFott, Galen$$EFott, Galen",
+        "$$DCanova, Diana$$ECanova, Diana",
+        "$$DDe Vries, David, 1958-$$EDe Vries, David, 1958-",
+        "$$DSundrud, Jack$$ESundrud, Jack",
+        "$$DYoung, Rusty$$EYoung, Rusty",
+        "$$DGagne, Paul R., 1956-$$EGagne, Paul R., 1956-",
+        "$$DEllard, Melissa Reilly$$EEllard, Melissa Reilly",
+        "$$DKeller, Laurie$$EKeller, Laurie",
+        "$$DScholastic Inc$$EScholastic Inc",
+        "$$DWeston Woods Studios$$EWeston Woods Studios"
+      ],
+      "subject": [
+        "$$DGolden rule -- Juvenile films$$EGolden rule Juvenile films",
+        "$$DNeighborliness -- Juvenile films$$ENeighborliness Juvenile films",
+        "$$DRabbits -- Juvenile films$$ERabbits Juvenile films",
+        "$$DOtters -- Juvenile films$$EOtters Juvenile films",
+        "$$DFiction films$$EFiction films",
+        "$$DShort films$$EShort films",
+        "$$DAnimated films$$EAnimated films",
+        "$$DChildren's films$$EChildren's films"
+      ],
+      "callnumber": [
+        "$$IBCL$$DPZ7.K281346 Do 2008$$EPZ    7            K 281346   DO   2008$$T0"
+      ],
+      "title": [
+        "$$DDo unto otters$$EDo unto otters"
+      ]
+    }
+  },
+  "@id": "http://bc-primo.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/ALMA-BC21438900870001021"
+}

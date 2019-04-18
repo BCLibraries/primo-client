@@ -1,0 +1,757 @@
+{
+  "enrichment": {
+    "virtualBrowseObject": {
+      "callNumber": "JK31 .W35",
+      "isVirtualBrowseEnabled": true,
+      "callNumberBrowseField": "browse_callnumber.0.V2"
+    }
+  },
+  "delivery": {
+    "availabilityLinks": [
+      "detailsGetit1",
+      "detailsGetit1"
+    ],
+    "physicalItemTextCodes": "delivery.code.alsophysical",
+    "displayLocation": false,
+    "availabilityLinksUrl": [
+      "",
+      ""
+    ],
+    "link": [
+      {
+        "displayLabel": "openurl",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...openurl1",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:0"
+      },
+      {
+        "displayLabel": "openurl",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...openurl2",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:1"
+      },
+      {
+        "displayLabel": "openurl",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...openurl3",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:2"
+      },
+      {
+        "displayLabel": "openurl",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...openurl4",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:3"
+      },
+      {
+        "displayLabel": "Permalink to this record",
+        "inst4opac": "BCL",
+        "linkURL": "http://bclib.bc.edu/libsearch/bc/keyword/ALMA-BC21331257940001021",
+        "linkType": "http://purl.org/pnx/linkType/lln02",
+        "@id": "_:4"
+      },
+      {
+        "displayLabel": "Permalink to this record",
+        "inst4opac": "BCL",
+        "linkURL": "http://bclib.bc.edu/libsearch/bc/keyword/ALMA-BC21331257940001021",
+        "linkType": "http://purl.org/pnx/linkType/lln02",
+        "@id": "_:5"
+      },
+      {
+        "displayLabel": "Permalink to this record",
+        "inst4opac": "BCL",
+        "linkURL": "http://bclib.bc.edu/libsearch/bc/keyword/ALMA-BC21331257940001021",
+        "linkType": "http://purl.org/pnx/linkType/lln02",
+        "@id": "_:6"
+      },
+      {
+        "displayLabel": "Permalink to this record",
+        "inst4opac": "BCL",
+        "linkURL": "http://bclib.bc.edu/libsearch/bc/keyword/ALMA-BC21331257940001021",
+        "linkType": "http://purl.org/pnx/linkType/lln02",
+        "@id": "_:7"
+      },
+      {
+        "displayLabel": "Online Version",
+        "inst4opac": "BCL",
+        "linkURL": "http://llmc.com/searchResultVolumes2.aspx?ext=true&catalogSet=68824",
+        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+        "@id": "_:8"
+      },
+      {
+        "displayLabel": "Online Version",
+        "inst4opac": "BCL",
+        "linkURL": "https://heinonline.org/HOL/Page?handle=hein.beal/makcon0001&collection=beal",
+        "linkType": "http://purl.org/pnx/linkType/linktorsrc",
+        "@id": "_:9"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...fulltexturl1",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:10"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...fulltexturl2",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:11"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...fulltexturl3",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:12"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.userservices.exlibrisgroup.com/...fulltexturl4",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:13"
+      },
+      {
+        "displayLabel": "This item in WorldCat®",
+        "inst4opac": "BCL",
+        "linkURL": "https://bc.on.worldcat.org/search?queryString=no:00852353",
+        "linkType": "http://purl.org/pnx/linkType/linktouc",
+        "@id": "_:14"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "linkURL": "no_cover",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:15"
+      }
+    ],
+    "availability": [
+      "not_restricted",
+      "available_in_my_institution"
+    ],
+    "additionalLocations": false,
+    "displayedAvailability": "not_restricted",
+    "holding":  [
+      {
+        "matchForHoldings": [
+          {
+            "holdingRecord": "852##b",
+            "matchOn": "MainLocation"
+          }
+        ],
+        "subLocationCode": "MCARD",
+        "ilsApiId": "01BC_INST21344686540001021",
+        "libraryCode": "ONL",
+        "isValidUser": true,
+        "mainLocation": "ONL",
+        "callNumber": "(Card)",
+        "adaptorid": "ALMA_01",
+        "organization": "BCL",
+        "holdingURL": "OVP",
+        "@id": "_:0",
+        "availabilityStatus": "available",
+        "subLocation": "Microcard",
+        "holdId": ""
+      },
+      {
+        "matchForHoldings": [
+          {
+            "holdingRecord": "852##b",
+            "matchOn": "MainLocation"
+          }
+        ],
+        "subLocationCode": "STACK",
+        "ilsApiId": "01BC_INST21344686540001021",
+        "libraryCode": "ONL",
+        "isValidUser": true,
+        "mainLocation": "ONL",
+        "callNumber": "",
+        "adaptorid": "ALMA_01",
+        "organization": "BCL",
+        "holdingURL": "OVP",
+        "@id": "_:1",
+        "availabilityStatus": "available",
+        "subLocation": "Stacks",
+        "holdId": ""
+      }
+    ],
+    "bestlocation": {
+      "matchForHoldings": [
+        {
+          "holdingRecord": "852##b",
+          "matchOn": "MainLocation"
+        }
+      ],
+      "mainLocation": "ONL",
+      "subLocationCode": "MCARD",
+      "callNumber": "",
+      "organization": "BCL",
+      "libraryCode": "ONL",
+      "@id": "_:0",
+      "availabilityStatus": "available",
+      "subLocation": "Microcard",
+      "holdId": "",
+      "isValidUser": true
+    },
+    "deliveryCategory": [
+      "Alma-E",
+      "Alma-P"
+    ],
+    "serviceMode": [
+      "activate",
+      "activate"
+    ],
+    "feDisplayOtherLocations": false,
+    "GetIt1": [
+      {
+        "links": [
+          {
+            "isLinktoOnline": true,
+            "displayText": "Almaviewit",
+            "hyperlinkText": "",
+            "getItTabText": "alma_tab1_norestrict",
+            "link": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-04-13T17%3A04%3A09IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-ALMA-BC&req_id=&rft_dat=ie=01BC_INST:21331257940001021,ie=01BC_INST:51460206020001021,ie=01BC_INST:51421060810001021,ie=01BC_INST:51502186130001021,language=eng,view=bclib_new&svc_dat=viewit&u.ignore_date_coverage=true&rft.series=",
+            "@id": "_:0"
+          }
+        ],
+        "category": "Alma-E"
+      },
+      {
+        "links": [
+          {
+            "isLinktoOnline": false,
+            "displayText": "Almagetit",
+            "hyperlinkText": "",
+            "getItTabText": "alma_tab1_avail",
+            "link": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2019-04-13T17%3A04%3A09IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-ALMA-BC&req_id=&rft_dat=ie=01BC_INST:21331257940001021,ie=01BC_INST:51460206020001021,ie=01BC_INST:51421060810001021,ie=01BC_INST:51502186130001021,language=eng,view=bclib_new&svc_dat=getit&user_ip=174.62.238.119&rft.number=JK31%20.W35&rft.series=&rft.kind=STACK_NL&rft.genre=&rft.format=book&req.skin=bclib_new",
+            "@id": "_:0"
+          }
+        ],
+        "category": "Alma-P"
+      }
+    ]
+  },
+  "@rta_link": "http://bc-primo.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/v1/rta/bclib_new?recordInformation=$$V21331257940001021$$OALMA-BC21331257940001021|$$V51460206020001021$$OALMA-BC51460206020001021|$$V51421060810001021$$OALMA-BC51421060810001021|$$V51502186130001021$$OALMA-BC51502186130001021|,|$$VALMA-BC$$OALMA-BC21331257940001021|$$VALMA-BC$$OALMA-BC51460206020001021|$$VALMA-BC$$OALMA-BC51421060810001021|$$VALMA-BC$$OALMA-BC51502186130001021|,|$$V01BC_INST$$OALMA-BC21331257940001021|$$V01BC_INST$$OALMA-BC51460206020001021|$$V01BC_INST$$OALMA-BC51421060810001021|$$V01BC_INST$$OALMA-BC51502186130001021|,|$$VAlma$$OALMA-BC21331257940001021|$$VAlma$$OALMA-BC51460206020001021|$$VAlma$$OALMA-BC51421060810001021|$$VAlma$$OALMA-BC51502186130001021|,|dedupmrg232802364|,|$$IBCL$$LONL$$1Stacks -No Loan$$2(JK31 .W35 )$$Savailable$$X01BC_INST$$YONL$$ZSTACK_NL$$P1$$OALMA-BC21331257940001021|,|$$IBCL$$Savailable|,|Alma-E|Alma-P|,|$$VBCL$$OALMA-BC21331257940001021|$$VBCL$$OALMA-BC51460206020001021|$$VBCL$$OALMA-BC51421060810001021|$$VBCL$$OALMA-BC51502186130001021|,|$$V01BC_INST:21331257940001021$$OALMA-BC21331257940001021|$$V01BC_INST:51460206020001021$$OALMA-BC51460206020001021|$$V01BC_INST:51421060810001021$$OALMA-BC51421060810001021|$$V01BC_INST:51502186130001021$$OALMA-BC51502186130001021|,|__NO_VALUE__|,|$$V01BC_INST21331257940001021$$OALMA-BC21331257940001021|$$V01BC_INST51460206020001021$$OALMA-BC51460206020001021|$$V01BC_INST51421060810001021$$OALMA-BC51421060810001021|$$V01BC_INST51502186130001021$$OALMA-BC51502186130001021|,|__NO_VALUE__|,|__NO_VALUE__",
+  "context": "L",
+  "adaptor": "Local Search Engine",
+  "pnx": {
+    "delivery": {
+      "institution": [
+        "$$VBCL$$OALMA-BC21331257940001021",
+        "$$VBCL$$OALMA-BC51460206020001021",
+        "$$VBCL$$OALMA-BC51421060810001021",
+        "$$VBCL$$OALMA-BC51502186130001021"
+      ],
+      "delcategory": [
+        "$$VAlma-P$$OALMA-BC21331257940001021",
+        "$$VAlma-E$$OALMA-BC51460206020001021",
+        "$$VAlma-E$$OALMA-BC51421060810001021",
+        "$$VAlma-E$$OALMA-BC51502186130001021"
+      ]
+    },
+    "display": {
+      "lds06": [
+        "Use copy",
+        "Access restricted to subscribers."
+      ],
+      "lds16": [
+        "Master and use copy. Digital master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002. http://purl.oclc.org/DLF/benchrepro0212"
+      ],
+      "creationdate": [
+        "1928"
+      ],
+      "creator": [
+        "Charles Warren 1868-1954"
+      ],
+      "availinstitution": [
+        "$$IBCL$$Savailable"
+      ],
+      "lds07": [
+        "Boston"
+      ],
+      "lds09": [
+        "Little, Brown and company",
+        "Little, Brown, and Company",
+        "Unspecified"
+      ],
+      "subject": [
+        "United States. Constitution; Constitutional history -- United States"
+      ],
+      "format": [
+        "xii, 832 p. 24 cm."
+      ],
+      "description": [
+        "\"Books containing letters quoted ... except when specific authorities are cited in the footnotes\": p. [807]"
+      ],
+      "language": [
+        "eng"
+      ],
+      "availlibrary": [
+        "$$IBCL$$LONL$$1Stacks -No Loan$$2(JK31 .W35 )$$Savailable$$X01BC_INST$$YONL$$ZSTACK_NL$$P1$$OALMA-BC21331257940001021"
+      ],
+      "source": [
+        "$$VALMA-BC$$OALMA-BC21331257940001021",
+        "$$VALMA-BC$$OALMA-BC51460206020001021",
+        "$$VALMA-BC$$OALMA-BC51421060810001021",
+        "$$VALMA-BC$$OALMA-BC51502186130001021"
+      ],
+      "title": [
+        "The making of the Constitution."
+      ],
+      "type": [
+        "book"
+      ],
+      "publisher": [
+        "Boston, Little, Brown and company"
+      ],
+      "lds30": [
+        "LLMC DIGITAL",
+        "HEINONLINE LEGAL CLASSICS"
+      ],
+      "availpnx": [
+        "available"
+      ],
+      "lds11": [
+        "99105577690001021",
+        "99137748539701021",
+        "99103484090001021",
+        "99137964148001021"
+      ],
+      "lds10": [
+        "JK31 .W35"
+      ],
+      "lds02": [
+        "Making of a European Constitution"
+      ],
+      "lds15": [
+        "Making of a European Constitution"
+      ],
+      "lds26": [
+        "by Charles Warren, author of \"The Supreme Court in United States history\", \"The Supreme Court and sovereign states\", \"Congress, the Constitution, and the Supreme Court\"."
+      ],
+      "lds14": [
+        "000100272",
+        "002168815"
+      ]
+    },
+    "control": {
+      "recordid": [
+        "dedupmrg232802364"
+      ],
+      "sourceid": [
+        "$$VALMA-BC$$OALMA-BC21331257940001021",
+        "$$VALMA-BC$$OALMA-BC51460206020001021",
+        "$$VALMA-BC$$OALMA-BC51421060810001021",
+        "$$VALMA-BC$$OALMA-BC51502186130001021"
+      ],
+      "ilsapiid": [
+        "$$V01BC_INST21331257940001021$$OALMA-BC21331257940001021",
+        "$$V01BC_INST51460206020001021$$OALMA-BC51460206020001021",
+        "$$V01BC_INST51421060810001021$$OALMA-BC51421060810001021",
+        "$$V01BC_INST51502186130001021$$OALMA-BC51502186130001021"
+      ],
+      "almaid": [
+        "$$V01BC_INST:21331257940001021$$OALMA-BC21331257940001021",
+        "$$V01BC_INST:51460206020001021$$OALMA-BC51460206020001021",
+        "$$V01BC_INST:51421060810001021$$OALMA-BC51421060810001021",
+        "$$V01BC_INST:51502186130001021$$OALMA-BC51502186130001021"
+      ],
+      "originalsourceid": [
+        "$$V01BC_INST$$OALMA-BC21331257940001021",
+        "$$V01BC_INST$$OALMA-BC51460206020001021",
+        "$$V01BC_INST$$OALMA-BC51421060810001021",
+        "$$V01BC_INST$$OALMA-BC51502186130001021"
+      ],
+      "sourceformat": [
+        "$$VMARC21$$OALMA-BC21331257940001021",
+        "$$VMARC21$$OALMA-BC51460206020001021",
+        "$$VMARC21$$OALMA-BC51421060810001021",
+        "$$VMARC21$$OALMA-BC51502186130001021"
+      ],
+      "sourcerecordid": [
+        "$$V21331257940001021$$OALMA-BC21331257940001021",
+        "$$V51460206020001021$$OALMA-BC51460206020001021",
+        "$$V51421060810001021$$OALMA-BC51421060810001021",
+        "$$V51502186130001021$$OALMA-BC51502186130001021"
+      ],
+      "sourcesystem": [
+        "$$VAlma$$OALMA-BC21331257940001021",
+        "$$VAlma$$OALMA-BC51460206020001021",
+        "$$VAlma$$OALMA-BC51421060810001021",
+        "$$VAlma$$OALMA-BC51502186130001021"
+      ]
+    },
+    "sort": {
+      "creationdate": [
+        "1928"
+      ],
+      "author": [
+        "warren charles 1868 1954"
+      ],
+      "title": [
+        "making of the Constitution."
+      ]
+    },
+    "frbr": {
+      "t": [
+        1
+      ],
+      "k1": [
+        "$$Kwarren charles 1868 1954$$AA",
+        "$$Kwarren$$AA"
+      ],
+      "k3": [
+        "$$Kmaking of the constitution$$AT"
+      ]
+    },
+    "dedup": {
+      "f10": [
+        "little brown and company"
+      ],
+      "f20": [
+        "99105577690001021"
+      ],
+      "f11": [
+        "warren charles 1868 1954"
+      ],
+      "f1": [
+        "28027550"
+      ],
+      "c1": [
+        "28027550"
+      ],
+      "f5": [
+        "makingoftheconstitution"
+      ],
+      "c3": [
+        "makingoftheconstitution"
+      ],
+      "f6": [
+        "1928"
+      ],
+      "c4": [
+        "1928"
+      ],
+      "f7": [
+        "making of the constitution"
+      ],
+      "c5": [
+        "99105577690001021"
+      ],
+      "f9": [
+        "xii, 832 p."
+      ],
+      "t": [
+        1
+      ]
+    },
+    "facets": {
+      "frbrtype": [
+        "6"
+      ],
+      "creatorcontrib": [
+        "Warren, Charles, 1868-1954",
+        "Warren"
+      ],
+      "creationdate": [
+        "1928"
+      ],
+      "newrecords": [
+        "20120618_554",
+        "20160529_982",
+        "20121029_866",
+        "20190328_34"
+      ],
+      "rsrctype": [
+        "books",
+        "ebooks"
+      ],
+      "lfc10": [
+        "JK31"
+      ],
+      "language": [
+        "eng"
+      ],
+      "collection": [
+        "ONL"
+      ],
+      "lfc01": [
+        "LLMC DIGITAL",
+        "HEINONLINE LEGAL CLASSICS"
+      ],
+      "prefilter": [
+        "books",
+        "ebooks"
+      ],
+      "toplevel": [
+        "available",
+        "online_resources"
+      ],
+      "library": [
+        "ONL"
+      ],
+      "atoz": [
+        "M"
+      ],
+      "lfc09": [
+        "JK31 .W35"
+      ],
+      "frbrgroupid": [
+        "230366759"
+      ],
+      "genre": [
+        "Electronic books"
+      ],
+      "topic": [
+        "United States. Constitution",
+        "Constitutional history\u2013United States"
+      ]
+    },
+    "enrichment": {
+      "classificationlcc": [
+        "JK31"
+      ]
+    },
+    "search": {
+      "creationdate": [
+        "1928"
+      ],
+      "subject": [
+        "United States. Constitution",
+        "Constitutional history United States."
+      ],
+      "rsrctype": [
+        "book"
+      ],
+      "lsr14": [
+        "ONL"
+      ],
+      "lsr12": [
+        "\"Books containing letters quoted ... except when specific authorities are cited in the footnotes\": p. [807]",
+        "xii, 832 p.",
+        "Electronic reproduction. [Place of reproduction not identified] : HathiTrust Digital Library, 2011.",
+        "Master and use copy. Digital master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002.",
+        "1 online resource (xii, 832 pages)",
+        "digitized",
+        "Electronic resource type: Book.",
+        "1 online resource"
+      ],
+      "title": [
+        "The making of the Constitution.",
+        "Making of the Constitution",
+        "The making of the Constitution /",
+        "Making of the Constitution."
+      ],
+      "startdate": [
+        "19280101"
+      ],
+      "lsr30": [
+        "LLMC DIGITAL",
+        "HEINONLINE LEGAL CLASSICS"
+      ],
+      "scope": [
+        "BCL",
+        "ONL",
+        "ALMA-BC",
+        "LLMC_DIGITAL",
+        "HEINONLINE_LEGAL_CLASSICS"
+      ],
+      "sourceid": [
+        "ALMA-BC"
+      ],
+      "creatorcontrib": [
+        "Charles Warren 1868-1954.",
+        "Warren, Charles, 1868-1954.",
+        "Warren, C",
+        "by Charles Warren, author of \"The Supreme Court in United States history\", \"The Supreme Court and sovereign states\", \"Congress, the Constitution, and the Supreme Court\".",
+        "Warren, author.",
+        "Warren"
+      ],
+      "lsr26": [
+        "by Charles Warren, author of \"The Supreme Court in United States history\", \"The Supreme Court and sovereign states\", \"Congress, the Constitution, and the Supreme Court\"."
+      ],
+      "format": [
+        "book"
+      ],
+      "lsr03": [
+        "ALMA-BC21331257940001021",
+        "ALMA-BC51460206020001021",
+        "ALMA-BC51421060810001021",
+        "ALMA-BC51502186130001021"
+      ],
+      "lsr22": [
+        "JK31 .W35"
+      ],
+      "lsr21": [
+        "STACK_NL"
+      ],
+      "addtitle": [
+        "Making of the Constitution."
+      ],
+      "lsr20": [
+        "000100272",
+        "bc_aleph000100272",
+        "99105577690001021",
+        "99137748539701021",
+        "002168815",
+        "bc_aleph002168815",
+        "99103484090001021",
+        "99137964148001021"
+      ],
+      "addsrcrecordid": [
+        "99105577690001021",
+        "99137748539701021",
+        "99103484090001021",
+        "99137964148001021"
+      ],
+      "recordid": [
+        "ALMA-BC21331257940001021",
+        "ALMA-BC51460206020001021",
+        "ALMA-BC51421060810001021",
+        "ALMA-BC51502186130001021"
+      ],
+      "enddate": [
+        "19281231"
+      ],
+      "lsr09": [
+        "Boston"
+      ],
+      "lsr08": [
+        "Little, Brown and company,",
+        "Little, Brown, and Company",
+        "Little, Brown, and Company,",
+        "Unspecified,"
+      ],
+      "alttitle": [
+        "Making of a European Constitution"
+      ],
+      "lsr06": [
+        "JK31 .W35",
+        "JK31.W35",
+        "JK31",
+        ".W35",
+        "KF4541",
+        ".W35 1928",
+        ".W351928"
+      ],
+      "lsr05": [
+        "00852353",
+        "(OCoLC)ocm00852353",
+        "64448273",
+        "(OCoLC)ocm64448273",
+        "958721528",
+        "(OCoLC)ocn958721528"
+      ]
+    },
+    "ranking": {
+      "booster2": [
+        "1"
+      ],
+      "booster1": [
+        "1"
+      ]
+    },
+    "links": {
+      "openurl": [
+        "$$V$$Topenurl_journal$$OALMA-BC21331257940001021",
+        "$$V$$Topenurl_journal$$OALMA-BC51460206020001021",
+        "$$V$$Topenurl_journal$$OALMA-BC51421060810001021",
+        "$$V$$Topenurl_journal$$OALMA-BC51502186130001021"
+      ],
+      "lln02": [
+        "$$Tpermalink$$DPermalink to this record$$OALMA-BC21331257940001021",
+        "$$Tpermalink$$DPermalink to this record$$OALMA-BC51460206020001021",
+        "$$Tpermalink$$DPermalink to this record$$OALMA-BC51421060810001021",
+        "$$Tpermalink$$DPermalink to this record$$OALMA-BC51502186130001021"
+      ],
+      "linktorsrc": [
+        "$$V$$Uhttp://llmc.com/searchResultVolumes2.aspx?ext=true&catalogSet=68824$$DOnline Version$$OALMA-BC51421060810001021",
+        "$$V$$Uhttps://heinonline.org/HOL/Page?handle=hein.beal/makcon0001&collection=beal$$DOnline Version$$OALMA-BC51502186130001021"
+      ],
+      "openurlfulltext": [
+        "$$V$$Topenurlfull_journal$$OALMA-BC21331257940001021",
+        "$$V$$Topenurlfull_journal$$OALMA-BC51460206020001021",
+        "$$V$$Topenurlfull_journal$$OALMA-BC51421060810001021",
+        "$$V$$Topenurlfull_journal$$OALMA-BC51502186130001021"
+      ],
+      "linktouc": [
+        "$$Tworldcat_oclc$$DThis item in WorldCat®",
+        "$$Tworldcat_oclc$$DThis item in WorldCat®",
+        "$$Tworldcat_oclc$$DThis item in WorldCat®"
+      ]
+    },
+    "addata": {
+      "date": [
+        "1928"
+      ],
+      "notes": [
+        "Includes bibliographical references and index."
+      ],
+      "aulast": [
+        "Warren",
+        "Warren,"
+      ],
+      "cop": [
+        "Boston"
+      ],
+      "ristype": [
+        "BOOK"
+      ],
+      "format": [
+        "book"
+      ],
+      "oclcid": [
+        "00852353",
+        "64448273",
+        "958721528"
+      ],
+      "lad07": [
+        "null"
+      ],
+      "lad06": [
+        "null"
+      ],
+      "addtitle": [
+        "Making of a European Constitution"
+      ],
+      "aufirst": [
+        "Charles,"
+      ],
+      "addau": [
+        "Warren, author"
+      ],
+      "lccn": [
+        "28027550"
+      ],
+      "au": [
+        "Warren, Charles, 1868-1954"
+      ],
+      "btitle": [
+        "The making of the Constitution.",
+        "Making of the Constitution",
+        "The making of the Constitution",
+        "Making of the Constitution."
+      ],
+      "risdate": [
+        "1928.",
+        "1928"
+      ],
+      "pub": [
+        "Little, Brown and company",
+        "Little, Brown, and Company",
+        "Unspecified"
+      ]
+    },
+    "browse": {
+      "callnumber": [
+        "$$IBCL$$DJK31 .W35$$EJK   31            W 35$$T0"
+      ]
+    }
+  },
+  "@id": "http://bc-primo.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/L/dedupmrg232802364"
+}
