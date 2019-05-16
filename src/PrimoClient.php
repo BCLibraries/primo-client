@@ -33,9 +33,10 @@ class PrimoClient
      * An API gateway can be specified as a parameter or taken from config.php.
      *
      * @param array $config
+     * @param ApiClient $api_client
      * @return PrimoClient
      */
-    public static function build(array $config = null): PrimoClient
+    public static function build(array $config = null, ApiClient $api_client = null): PrimoClient
     {
         if (isset($config)) {
             define(__NAMESPACE__ . '\APIKEY', $config['apikey']);
@@ -48,9 +49,12 @@ class PrimoClient
             }
         }
 
-        $guzzle = new Client(['base_uri' => GATEWAY]);
-        $http_client = new ApiClient($guzzle);
-        return new PrimoClient($http_client);
+        if ($api_client === null) {
+            $guzzle = new Client(['base_uri' => GATEWAY]);
+            $api_client = new ApiClient($guzzle);
+        }
+
+        return new PrimoClient($api_client);
     }
 
     /**
@@ -65,7 +69,7 @@ class PrimoClient
      */
     public function search(string $keyword)
     {
-        $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, 'otters');
+        $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $keyword);
         $request = new SearchRequest($query, DEFAULT_VID, DEFAULT_TAB, DEFAULT_SCOPE, APIKEY);
         $json = $this->client->get($request->url());
         return SearchTranslator::translate($json);

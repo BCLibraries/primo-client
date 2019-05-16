@@ -23,7 +23,7 @@ class SearchTranslator
         $response->total = $json->info->total;
         $response->first = $json->info->first;
         $response->last = $json->info->last;
-        $response->did_u_mean = $json->did_u_mean;
+        $response->did_u_mean = $json->did_u_mean ?? null;
 
         foreach($json->facets as $facet_json) {
             $facet = FacetTranslator::translate($facet_json);
