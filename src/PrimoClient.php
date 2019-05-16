@@ -61,13 +61,13 @@ class PrimoClient
      * Perform a search
      *
      * @param string $keyword
-     * @return mixed
+     * @return SearchResponse
      * @throws Exceptions\BadAPIResponseException
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @todo Add more kinds of searches
      *
      */
-    public function search(string $keyword)
+    public function search(string $keyword): SearchResponse
     {
         $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $keyword);
         $request = new SearchRequest($query, DEFAULT_VID, DEFAULT_TAB, DEFAULT_SCOPE, APIKEY);

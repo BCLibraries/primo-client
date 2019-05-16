@@ -27,6 +27,9 @@ namespace BCLib\PrimoClient;
  */
 class SearchResponse
 {
+    /**
+     * @var Doc[]
+     */
     public $docs;
     public $facets;
     public $total;
