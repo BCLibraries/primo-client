@@ -7,7 +7,7 @@ A client for accessing the [Primo Brief Search RESTful API](https://developers.e
 Use [composer](https://getcomposer.org/) to install Primo-Client.
 
 ```bash
-composer require bclibraries/primo-client:^0.2
+composer require bclibraries/primo-client:^0.3
 ```
 
 Primo Client is currently a 0.* release, so things might change drastically with any minor release.
