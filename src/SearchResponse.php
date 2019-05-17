@@ -36,6 +36,7 @@ class SearchResponse
     public $last;
     public $first;
     public $did_u_mean;
+    public $controlled_vocabulary;
 
     /**
      * The original JSON of the search response in default json_decode output

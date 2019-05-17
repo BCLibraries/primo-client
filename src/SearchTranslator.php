@@ -24,8 +24,9 @@ class SearchTranslator
         $response->first = $json->info->first;
         $response->last = $json->info->last;
         $response->did_u_mean = $json->did_u_mean ?? null;
+        $response->controlled_vocabulary = isset($json->info->controlledVocabulary) ? $json->info->controlledVocabulary->errorMessages[1] : null;
 
-        foreach($json->facets as $facet_json) {
+        foreach ($json->facets as $facet_json) {
             $facet = FacetTranslator::translate($facet_json);
             $response->facets[$facet->name] = $facet;
         }

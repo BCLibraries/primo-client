@@ -14,6 +14,14 @@ class SearchTranslatorTest extends TestCase
         $this->assertEquals(10, $response->last);
         $this->assertEquals(1, $response->first);
         $this->assertEquals('others', $response->did_u_mean);
+        $this->assertNull($response->controlled_vocabulary);
+    }
+
+    public function testReadsControlledVocabularyCorrectly(): void
+    {
+        $json_file = file_get_contents(__DIR__ . '/search-japanese-prints.json');
+        $response = SearchTranslator::translate(json_decode($json_file, false));
+        $this->assertEquals('woodblock printing in japan', $response->controlled_vocabulary);
     }
 
     public function testReadsFacetsCorrectly(): void
