@@ -25,7 +25,13 @@ $config = [
     'tab' => 'the_tab',
     'scope' => 'mylib'
 ];
-$primo = \BCLib\PrimoClient\PrimoClient::build($config);
+$primo = \BCLib\PrimoClient\PrimoClient::build(
+                                                $config['gateway'],
+                                                $config['apikey'], 
+                                                $config['tab'],
+                                                $config['gateway'],
+                                                $config['scope']
+                                               );
 $response = $primo->search('otters');
 ```
 

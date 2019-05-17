@@ -45,20 +45,16 @@ class SearchRequest
      */
     private $params = [];
 
-    public function __construct(
-        Query $query,
-        string $vid,
-        string $tab,
-        string $scope,
-        string $apikey,
-        string $inst = null
-    ) {
-        $this->params['apikey'] = $apikey;
-        $this->params['vid'] = $vid;
-        $this->params['tab'] = $tab;
-        $this->params['scope'] = $scope;
-        $this->params['q'] = (string)$query;
-        $this->params['inst'] = $inst;
+    public function __construct(Query $query, QueryConfig $config)
+    {
+        $this->params = [
+            'apikey' => $config->apikey,
+            'vid' => $config->vid,
+            'tab' => $config->tab,
+            'scope' => $config->scope,
+            'inst' => $config->inst,
+            'q' => (string)$query
+        ];
     }
 
     /**

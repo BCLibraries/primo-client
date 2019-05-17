@@ -2,6 +2,7 @@
 
 use BCLib\PrimoClient\Exceptions\InvalidArgumentException as InvalidArgumentExceptionAlias;
 use BCLib\PrimoClient\Query;
+use BCLib\PrimoClient\QueryConfig;
 use BCLib\PrimoClient\QueryFacet;
 use BCLib\PrimoClient\SearchRequest;
 use PHPUnit\Framework\TestCase;
@@ -25,11 +26,13 @@ class SearchRequestTest extends TestCase
         $tab = 'default';
         $scope = 'bcl';
 
+        $config = new QueryConfig($apikey, $tab, $vid, $scope);
+
         $query = $this->createMock(Query::class);
         $query->method('__toString')
             ->willReturn('any,contains,otters');
 
-        $this->request = new SearchRequest($query, $vid, $tab, $scope, $apikey);
+        $this->request = new SearchRequest($query, $config);
 
         $query_output = 'any%2Ccontains%2Cotters';
         $this->expected_url = "/primo/v1/search?apikey=$apikey&vid=$vid&tab=$tab&scope=$scope&q=$query_output";

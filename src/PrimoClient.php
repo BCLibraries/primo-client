@@ -20,58 +20,61 @@ class PrimoClient
     /**
      * @var ApiClient
      */
-    private $client;
+    private $api_client;
 
-    private function __construct(ApiClient $client)
+    /**
+     * @var QueryConfig
+     */
+    private $config;
+
+    public function __construct(ApiClient $api_client, QueryConfig $config = null)
     {
-        $this->client = $client;
+        $this->api_client = $api_client;
+        $this->config = isset($config) ? clone $config : null;
     }
 
     /**
      * Build a PrimoSearch client
      *
-     * An API gateway can be specified as a parameter or taken from config.php.
+     * Provisions and builds a Primo client.
      *
-     * @param array $config
-     * @param ApiClient $api_client
+     * @param string $gateway
+     * @param string $apikey
+     * @param string $tab
+     * @param string $vid
+     * @param string $scope
+     * @param string|null $inst
      * @return PrimoClient
      */
-    public static function build(array $config = null, ApiClient $api_client = null): PrimoClient
-    {
-        if (isset($config)) {
-            define(__NAMESPACE__ . '\APIKEY', $config['apikey']);
-            define(__NAMESPACE__ . '\GATEWAY', $config['gateway']);
-            define(__NAMESPACE__ . '\DEFAULT_VID', $config['vid']);
-            define(__NAMESPACE__ . '\DEFAULT_TAB', $config['tab']);
-            define(__NAMESPACE__ . '\DEFAULT_SCOPE', $config['scope']);
-            if (isset($config['inst'])) {
-                define('INST', $config['inst']);
-            }
-        }
-
-        if ($api_client === null) {
-            $guzzle = new Client(['base_uri' => GATEWAY]);
-            $api_client = new ApiClient($guzzle);
-        }
-
-        return new PrimoClient($api_client);
+    public static function build(
+        string $gateway,
+        string $apikey,
+        string $tab,
+        string $vid,
+        string $scope,
+        string $inst = null
+    ): PrimoClient {
+        $config = new QueryConfig($apikey, $tab, $vid, $scope, $inst);
+        $guzzle = new Client(['base_uri' => $gateway]);
+        $api_client = new ApiClient($guzzle);
+        return new PrimoClient($api_client, $config);
     }
 
     /**
      * Perform a search
      *
      * @param string $keyword
+     * @param QueryConfig|null $config
      * @return SearchResponse
      * @throws Exceptions\BadAPIResponseException
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @todo Add more kinds of searches
-     *
      */
-    public function search(string $keyword): SearchResponse
+    public function search(string $keyword, QueryConfig $config = null): SearchResponse
     {
+        $config = $config ?? $this->config;
         $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $keyword);
-        $request = new SearchRequest($query, DEFAULT_VID, DEFAULT_TAB, DEFAULT_SCOPE, APIKEY);
-        $json = $this->client->get($request->url());
+        $request = new SearchRequest($query, $config);
+        $json = $this->api_client->get($request->url());
         return SearchTranslator::translate($json);
     }
 }
