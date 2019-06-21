@@ -31,11 +31,13 @@ class DocTranslator
     private static function processLinks(Doc $doc): void
     {
         $json = $doc->json;
+        $processed_links = [];
         foreach ($json->delivery->link as $link) {
             $type = str_replace('http://purl.org/pnx/linkType/', '', $link->linkType);
-            $doc->links[$type] = $doc->links[$type] ?? [];
-            $doc->links[$type][] = new Link($link->displayLabel, $link->linkURL, $type);
+            $processed_links[$type] = $processed_links[$type] ?? [];
+            $processed_links[$type][] = new Link($link->displayLabel, $link->linkURL, $type);
         }
+        $doc->links = $processed_links;
         $doc->link_to_resource = $doc->links['linktorsrc'] ?? [];
         $doc->openurl = $doc->links['openurl'] ?? [];
         $doc->openurl_fulltext = $doc->links['openurlfulltext'] ?? [];
@@ -44,8 +46,9 @@ class DocTranslator
     private static function processHoldings(Doc $doc): void
     {
         $json = $doc->json;
+        $holdings = [];
         foreach ($json->delivery->holding as $holding) {
-            $doc->holdings[] = new Holding(
+            $holdings[] = new Holding(
                 $holding->ilsApiId,
                 $holding->libraryCode,
                 $holding->subLocationCode,
@@ -54,6 +57,7 @@ class DocTranslator
                 $holding->availabilityStatus
             );
         }
+        $doc->holdings = $holdings;
     }
 
     private static function determineTypes(Doc $doc): void

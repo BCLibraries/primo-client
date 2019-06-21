@@ -31,10 +31,44 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  *    }
  *
  * Class Doc
+ *
+ * @property string id
+ * @property string title
+ * @property string creator
+ * @property string[] contributors
+ * @property string date
+ * @property string publisher
+ * @property string abstract
+ * @property string type
+ * @property string[] isbn
+ * @property string[] issn
+ * @property string[] oclcid
+ * @property string display_subject
+ * @property string[] genres
+ * @property string[] creator_facet
+ * @property string[] collection_facet
+ * @property string[] resourcetype_facet
+ * @property string[] languages
+ * @property string format
+ * @property string[] description
+ * @property string frbr_group_id
+ * @property string[] cover_images
+ * @property Link[] openurl
+ * @property Link[] openurl_fulltext
+ * @property string sort_title
+ * @property string sort_creator
+ * @property bool is_electronic
+ * @property bool is_physical
+ * @property bool is_digital
+ * @property array links
+ * @property Holding[] holdings
+ *
  * @package BCLib\PrimoClient
  */
 class Doc
 {
+    use GetterSetter;
+
     /**
      * Raw JSON of the doc result, in json_decode default output format.
      *
@@ -45,167 +79,167 @@ class Doc
     /**
      * @var string
      */
-    public $id;
+    protected $_id;
 
     /**
      * @var string
      */
-    public $title;
+    protected $_title;
 
     /**
      * @var string
      */
-    public $creator;
+    protected $_creator;
 
     /**
      * @var string[]
      */
-    public $contributors = [];
+    protected $_contributors = [];
 
     /**
      * @var string
      */
-    public $date;
+    protected $_date;
 
     /**
      * @var string
      */
-    public $publisher;
+    protected $_publisher;
 
     /**
      * @var string
      */
-    public $abstract;
+    protected $_abstract;
 
     /**
      * @var string
      */
-    public $type;
+    protected $_type;
 
     /**
      * @var string[]
      */
-    public $isbn = [];
+    protected $_isbn = [];
 
     /**
      * @var string[]
      */
-    public $issn = [];
+    protected $_issn = [];
 
     /**
      * @var string[]
      */
-    public $oclcid = [];
+    protected $_oclcid = [];
 
     /**
      * @var string[]
      */
-    public $subjects = [];
+    protected $_subjects = [];
 
     /**
      * @var string
      */
-    public $display_subject;
+    protected $_display_subject;
 
     /**
      * @var string[]
      */
-    public $genres = [];
+    protected $_genres = [];
 
     /**
      * @var string[]
      */
-    public $creator_facet = [];
+    protected $_creator_facet = [];
 
     /**
      * @var string[]
      */
-    public $collection_facet = [];
+    protected $_collection_facet = [];
 
     /**
      * @var string[]
      */
-    public $resourcetype_facet = [];
+    protected $_resourcetype_facet = [];
 
     /**
      * @var string[]
      */
-    public $languages = [];
+    protected $_languages = [];
 
     /**
      * @var string
      */
-    public $format;
+    protected $_format;
 
     /**
      * @var string[]
      */
-    public $description;
+    protected $_description;
 
     /**
      * @var string
      */
-    public $frbr_group_id;
+    protected $_frbr_group_id;
 
     /**
      * @var string[]
      */
-    public $cover_images;
+    protected $_cover_images;
 
     /**
      * @var Link[]
      */
-    public $link_to_resource;
+    protected $_link_to_resource;
 
     /**
      * @var Link[]
      */
-    public $openurl;
+    protected $_openurl;
 
     /**
      * @var Link[]
      */
-    public $openurl_fulltext;
+    protected $_openurl_fulltext;
 
     /**
      * @var string
      */
-    public $sort_title;
+    protected $_sort_title;
 
     /**
      * @var string
      */
-    public $sort_creator;
+    protected $_sort_creator;
 
     /**
      * @var string
      */
-    public $sort_date;
+    protected $_sort_date;
 
     /**
      * @var bool
      */
-    public $is_electronic;
+    protected $_is_electronic;
 
     /**
      * @var bool
      */
-    public $is_physical;
+    protected $_is_physical;
 
     /**
      * @var bool
      */
-    public $is_digital;
+    protected $_is_digital;
 
     /**
      * @var array[]
      */
-    public $links;
+    protected $_links;
 
     /**
      * @var Holding[]
      */
-    public $holdings;
+    protected $_holdings;
 
     /**
      * Doc constructor.
@@ -237,9 +271,9 @@ class Doc
      *
      * @param string $category
      * @param string $field
-     * @return array
+     * @return string[]
      */
-    public function pnx(string $category, string $field)
+    public function pnx(string $category, string $field): array
     {
         if (!isset($this->json->pnx->$category)) {
             throw new InvalidArgumentException("$category is not a valid PNX category");
@@ -258,7 +292,190 @@ class Doc
         return $result;
     }
 
-    private function readMultiItemPNXEntry($pnx_array): array
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->_id;
+    }
+
+    public function getTitle(): string
+    {
+        return $this->_title;
+    }
+
+    public function getCreator(): string
+    {
+        return $this->_creator;
+    }
+
+    public function getContributors(): array
+    {
+        return $this->_contributors;
+    }
+
+    public function getDate(): string
+    {
+        return $this->_date;
+    }
+
+    public function getPublisher(): string
+    {
+        return $this->_publisher;
+    }
+
+    public function getAbstract(): string
+    {
+        return $this->_abstract;
+    }
+
+    public function getType(): string
+    {
+        return $this->_type;
+    }
+
+    public function getIsbn(): array
+    {
+        return $this->_isbn;
+    }
+
+    public function getIssn(): array
+    {
+        return $this->_issn;
+    }
+
+    public function getOclcid(): array
+    {
+        return $this->_oclcid;
+    }
+
+    public function getSubjects(): array
+    {
+        return $this->_subjects;
+    }
+
+    public function getDisplaySubject(): string
+    {
+        return $this->_display_subject;
+    }
+
+    public function getGenres(): array
+    {
+        return $this->_genres;
+    }
+
+    public function getCreatorFacet(): array
+    {
+        return $this->_creator_facet;
+    }
+
+    public function getCollectionFacet(): array
+    {
+        return $this->_collection_facet;
+    }
+
+    public function getResourcetypeFacet(): array
+    {
+        return $this->_resourcetype_facet;
+    }
+
+    public function getLanguages(): array
+    {
+        return $this->_languages;
+    }
+
+    public function getFormat(): string
+    {
+        return $this->_format;
+    }
+
+    public function getDescription(): array
+    {
+        return $this->_description;
+    }
+
+    public function getFrbrGroupId(): string
+    {
+        return $this->_frbr_group_id;
+    }
+
+    public function getCoverImages(): array
+    {
+        return $this->_cover_images;
+    }
+
+    public function getLinkToResource(): array
+    {
+        return $this->_link_to_resource;
+    }
+
+    public function getOpenurl(): array
+    {
+        return $this->_openurl;
+    }
+
+    public function getOpenurlFulltext(): array
+    {
+        return $this->_openurl_fulltext;
+    }
+
+    public function getSortTitle(): string
+    {
+        return $this->_sort_title;
+    }
+
+    public function getSortCreator(): string
+    {
+        return $this->_sort_creator;
+    }
+
+    public function getSortDate(): string
+    {
+        return $this->_sort_date;
+    }
+
+    public function isElectronic(): bool
+    {
+        return $this->_is_electronic;
+    }
+
+    public function isPhysical(): bool
+    {
+        return $this->_is_physical;
+    }
+
+    public function isDigital(): bool
+    {
+        return $this->_is_digital;
+    }
+
+    public function getLinks(): array
+    {
+        return $this->_links;
+    }
+
+    public function getHoldings(): array
+    {
+        return $this->_holdings;
+    }
+
+    /**
+     * Read a multi-item PNX entries
+     *
+     * Some PNX entries have different values for different holdings. The Primo API packs these values into
+     * '$$X'-delimited strings, with '$$O' containing the holding ID and '$$V' containing the asssociated
+     * value, e.g.:
+     *
+     *     "delcategory": [
+     *         "$$VAlma-P$$OALMA-BC21331257940001021",
+     *         "$$VAlma-E$$OALMA-BC51460206020001021"
+     *     ]
+     *
+     * @param $pnx_array
+     * @return string[]
+     */
+    private function readMultiItemPNXEntry(array $pnx_array): array
     {
         $result = [];
         foreach ($pnx_array as $item) {

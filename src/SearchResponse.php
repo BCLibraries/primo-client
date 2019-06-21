@@ -3,10 +3,7 @@
 namespace BCLib\PrimoClient;
 
 /**
- *
- * SearchResponse is a convenience class for accessing the results of a Primo
- * Brief Search API call. Some important record fields without requiring
- * knowledge of the JSON response structure.
+ * A convenience class for accessing the results of a Primo Brief Search API call.
  *
  * Access can be through named parameters:
  *

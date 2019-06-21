@@ -30,7 +30,7 @@ class SearchRequest
 {
 
     /**
-     * Possible values for sort order. Can be sed with sort() function.
+     * Possible values for sort order. Used with sort() function.
      */
     public const SORT_RANK = 'rank';
     public const SORT_TITLE = 'title';
@@ -75,7 +75,7 @@ class SearchRequest
      * @param int $offset
      * @return $this
      */
-    public function offset(int $offset)
+    public function offset(int $offset): self
     {
         $this->params['offset'] = (string)$offset;
         return $this;
@@ -87,7 +87,7 @@ class SearchRequest
      * @param int $limit
      * @return $this
      */
-    public function limit(int $limit)
+    public function limit(int $limit): self
     {
         $this->params['limit'] = (string)$limit;
         return $this;
@@ -107,7 +107,7 @@ class SearchRequest
      * @param string $sort order code
      * @return $this
      */
-    public function sort(string $sort)
+    public function sort(string $sort): self
     {
         $valid_sorts = [
             self::SORT_AUTHOR,
@@ -133,7 +133,7 @@ class SearchRequest
      * @param bool $use_controlled_vocabulary
      * @return $this
      */
-    public function conVoc(bool $use_controlled_vocabulary)
+    public function conVoc(bool $use_controlled_vocabulary): self
     {
         $this->params['conVoc'] = $use_controlled_vocabulary ? 'true' : 'false';
         return $this;
@@ -145,7 +145,7 @@ class SearchRequest
      * @param bool $expand_metalib_searches
      * @return $this
      */
-    public function getMore(bool $expand_metalib_searches = false)
+    public function getMore(bool $expand_metalib_searches = false): self
     {
         $this->params['getMore'] = $expand_metalib_searches ? '1' : '0';
         return $this;
@@ -157,7 +157,7 @@ class SearchRequest
      * @param bool $show_non_fulltext true to show non-fulltext results
      * @return $this
      */
-    public function pcAvailability(bool $show_non_fulltext = true)
+    public function pcAvailability(bool $show_non_fulltext = true): self
     {
         $this->params['pcAvailability'] = $show_non_fulltext ? 'true' : 'false';
         return $this;
@@ -176,7 +176,7 @@ class SearchRequest
      * @param QueryFacet $facet
      * @return $this
      */
-    public function include(QueryFacet $facet)
+    public function include(QueryFacet $facet): self
     {
         if (!$facet->isExact()) {
             throw new InvalidArgumentException('qInclude facets must be exact');
@@ -199,7 +199,7 @@ class SearchRequest
      * @param QueryFacet $facet
      * @return $this
      */
-    public function exclude(QueryFacet $facet)
+    public function exclude(QueryFacet $facet): self
     {
         if (!$facet->isExact()) {
             throw new InvalidArgumentException('qExclude facets must be exact');
@@ -229,7 +229,7 @@ class SearchRequest
      * @param QueryFacet $facet
      * @return $this
      */
-    public function multiFacet(QueryFacet $facet)
+    public function multiFacet(QueryFacet $facet): self
     {
         if ($facet->isExact()) {
             throw new InvalidArgumentException('multiFacets facets must not be exact');
