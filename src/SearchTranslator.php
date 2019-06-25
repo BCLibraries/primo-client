@@ -39,7 +39,7 @@ class SearchTranslator
             },
             $json->docs
         );
-
+        
         return $response;
     }
 }

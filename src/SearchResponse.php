@@ -57,17 +57,26 @@ class SearchResponse
         $this->json = $json;
     }
 
+    /**
+     * @return Doc[]
+     */
     public function getDocs(): array
     {
         return $this->_docs;
     }
 
+    /**
+     * @param Doc[] $docs
+     */
     public function setDocs(array $docs): void
     {
         $this->_docs = $docs;
     }
 
-    public function getFacets()
+    /**
+     * @return ResponseFacet[]
+     */
+    public function getFacets(): array
     {
         return $this->_facets;
     }
@@ -77,7 +86,7 @@ class SearchResponse
         $this->_facets = $facets;
     }
 
-    public function getTotal()
+    public function getTotal(): int
     {
         return $this->_total;
     }
@@ -87,7 +96,7 @@ class SearchResponse
         $this->_total = $total;
     }
 
-    public function getLast()
+    public function getLast(): int
     {
         return $this->_last;
     }
@@ -97,7 +106,7 @@ class SearchResponse
         $this->_last = $last;
     }
 
-    public function getFirst()
+    public function getFirst(): int
     {
         return $this->_first;
     }
@@ -107,7 +116,7 @@ class SearchResponse
         $this->_first = $first;
     }
 
-    public function getDidUMean()
+    public function getDidUMean(): ?string
     {
         return $this->_did_u_mean;
     }
@@ -117,7 +126,7 @@ class SearchResponse
         $this->_did_u_mean = $did_u_mean;
     }
 
-    public function getControlledVocabulary()
+    public function getControlledVocabulary(): ?string
     {
         return $this->_controlled_vocabulary;
     }

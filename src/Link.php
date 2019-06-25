@@ -56,7 +56,7 @@ class Link
         $this->_url = $url;
     }
 
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->_type;
     }

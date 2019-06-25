@@ -296,7 +296,7 @@ class Doc
     {
         return $this->_id;
     }
-
+    
     public function getTitle(): ?string
     {
         return $this->_title;
@@ -307,6 +307,9 @@ class Doc
         return $this->_creator;
     }
 
+    /**
+     * @return string[]
+     */
     public function getContributors(): array
     {
         return $this->_contributors;
@@ -332,21 +335,33 @@ class Doc
         return $this->_type;
     }
 
+    /**
+     * @return string[]
+     */
     public function getIsbn(): array
     {
         return $this->_isbn;
     }
 
+    /**
+     * @return string[]
+     */
     public function getIssn(): array
     {
         return $this->_issn;
     }
 
+    /**
+     * @return string[]
+     */
     public function getOclcid(): array
     {
         return $this->_oclcid;
     }
 
+    /**
+     * @return string[]
+     */
     public function getSubjects(): array
     {
         return $this->_subjects;
@@ -357,26 +372,40 @@ class Doc
         return $this->_display_subject;
     }
 
+    /**
+     * @return string[]
+     */
     public function getGenres(): array
     {
         return $this->_genres;
     }
-
+    /**
+     * @return string[]
+     */
     public function getCreatorFacet(): array
     {
         return $this->_creator_facet;
     }
 
+    /**
+     * @return string[]
+     */
     public function getCollectionFacet(): array
     {
         return $this->_collection_facet;
     }
 
+    /**
+     * @return string[]
+     */
     public function getResourcetypeFacet(): array
     {
         return $this->_resourcetype_facet;
     }
 
+    /**
+     * @return string[]
+     */
     public function getLanguages(): array
     {
         return $this->_languages;
@@ -387,6 +416,9 @@ class Doc
         return $this->_format;
     }
 
+    /**
+     * @return string[]
+     */
     public function getDescription(): array
     {
         return $this->_description;
@@ -397,21 +429,33 @@ class Doc
         return $this->_frbr_group_id;
     }
 
+    /**
+     * @return string[]
+     */
     public function getCoverImages(): array
     {
         return $this->_cover_images;
     }
 
+    /**
+     * @return Link[]
+     */
     public function getLinkToResource(): array
     {
         return $this->_link_to_resource;
     }
 
+    /**
+     * @return Link[]
+     */
     public function getOpenurl(): array
     {
         return $this->_openurl;
     }
 
+    /**
+     * @return Link[]
+     */
     public function getOpenurlFulltext(): array
     {
         return $this->_openurl_fulltext;
@@ -447,11 +491,17 @@ class Doc
         return $this->_is_digital;
     }
 
+    /**
+     * @return Link[]
+     */
     public function getLinks(): array
     {
         return $this->_links;
     }
 
+    /**
+     * @return Holding[]
+     */
     public function getHoldings(): array
     {
         return $this->_holdings;

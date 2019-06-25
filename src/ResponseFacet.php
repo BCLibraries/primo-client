@@ -66,11 +66,17 @@ class ResponseFacet
         $this->_name = $name;
     }
 
+    /**
+     * @return ResponseFacetValue[]
+     */
     public function getValues(): array
     {
         return $this->_values;
     }
 
+    /**
+     * @param ResponseFacetValue[] $values
+     */
     public function setValues(array $values): void
     {
         $this->_values = $values;
