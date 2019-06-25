@@ -21,19 +21,29 @@ namespace BCLib\PrimoClient;
  *
  * Class SearchResponse
  * @package BCLib\PrimoClient
+ *
+ * @property Doc[] docs
+ * @property ResponseFacet[] facets
+ * @property int total
+ * @property int first
+ * @property int last
+ * @property string did_u_mean
+ * @property string controlled_vocabulary
  */
 class SearchResponse
 {
+    use GetterSetter;
+
     /**
      * @var Doc[]
      */
-    public $docs;
-    public $facets;
-    public $total;
-    public $last;
-    public $first;
-    public $did_u_mean;
-    public $controlled_vocabulary;
+    private $_docs;
+    private $_facets;
+    private $_total;
+    private $_last;
+    private $_first;
+    private $_did_u_mean;
+    private $_controlled_vocabulary;
 
     /**
      * The original JSON of the search response in default json_decode output
@@ -43,6 +53,86 @@ class SearchResponse
     public $json;
 
     public function __construct(\stdClass $json)
+    {
+        $this->json = $json;
+    }
+
+    public function getDocs(): array
+    {
+        return $this->_docs;
+    }
+
+    public function setDocs(array $docs): void
+    {
+        $this->_docs = $docs;
+    }
+
+    public function getFacets()
+    {
+        return $this->_facets;
+    }
+
+    public function setFacets($facets): void
+    {
+        $this->_facets = $facets;
+    }
+
+    public function getTotal()
+    {
+        return $this->_total;
+    }
+
+    public function setTotal($total): void
+    {
+        $this->_total = $total;
+    }
+
+    public function getLast()
+    {
+        return $this->_last;
+    }
+
+    public function setLast($last): void
+    {
+        $this->_last = $last;
+    }
+
+    public function getFirst()
+    {
+        return $this->_first;
+    }
+
+    public function setFirst($first): void
+    {
+        $this->_first = $first;
+    }
+
+    public function getDidUMean()
+    {
+        return $this->_did_u_mean;
+    }
+
+    public function setDidUMean($did_u_mean): void
+    {
+        $this->_did_u_mean = $did_u_mean;
+    }
+
+    public function getControlledVocabulary()
+    {
+        return $this->_controlled_vocabulary;
+    }
+
+    public function setControlledVocabulary($controlled_vocabulary): void
+    {
+        $this->_controlled_vocabulary = $controlled_vocabulary;
+    }
+
+    public function getJson(): \stdClass
+    {
+        return $this->json;
+    }
+
+    public function setJson(\stdClass $json): void
     {
         $this->json = $json;
     }

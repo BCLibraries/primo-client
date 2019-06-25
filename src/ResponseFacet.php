@@ -7,23 +7,27 @@ namespace BCLib\PrimoClient;
  *
  * Class ResponseFacet
  * @package BCLib\PrimoClient
+ *
+ * @property string name
+ * @property ResponseFacetValue[] values
  */
 class ResponseFacet
 {
+    use GetterSetter;
+
     /**
      * @var string
      */
-    public $name;
+    private $_name;
 
     /**
      * @var ResponseFacetValue[]
      */
-    public $values = [];
+    private $_values = [];
 
     public function __construct(string $name)
     {
-        $this->name = $name;
-        $this->values = [];
+        $this->_name = $name;
     }
 
     /**
@@ -32,7 +36,7 @@ class ResponseFacet
     public function sortByFrequency(): void
     {
         usort(
-            $this->values,
+            $this->_values,
             function ($a, $b) {
                 return $b->count - $a->count;
             }
@@ -45,10 +49,30 @@ class ResponseFacet
     public function sortAlphabetically(): void
     {
         usort(
-            $this->values,
+            $this->_values,
             function ($a, $b) {
                 return strcasecmp($a->value, $b->value);
             }
         );
+    }
+
+    public function getName(): string
+    {
+        return $this->_name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->_name = $name;
+    }
+
+    public function getValues(): array
+    {
+        return $this->_values;
+    }
+
+    public function setValues(array $values): void
+    {
+        $this->_values = $values;
     }
 }

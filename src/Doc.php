@@ -79,167 +79,167 @@ class Doc
     /**
      * @var string
      */
-    protected $_id;
+    private $_id;
 
     /**
      * @var string
      */
-    protected $_title;
+    private $_title;
 
     /**
      * @var string
      */
-    protected $_creator;
+    private $_creator;
 
     /**
      * @var string[]
      */
-    protected $_contributors = [];
+    private $_contributors = [];
 
     /**
      * @var string
      */
-    protected $_date;
+    private $_date;
 
     /**
      * @var string
      */
-    protected $_publisher;
+    private $_publisher;
 
     /**
      * @var string
      */
-    protected $_abstract;
+    private $_abstract;
 
     /**
      * @var string
      */
-    protected $_type;
+    private $_type;
 
     /**
      * @var string[]
      */
-    protected $_isbn = [];
+    private $_isbn = [];
 
     /**
      * @var string[]
      */
-    protected $_issn = [];
+    private $_issn = [];
 
     /**
      * @var string[]
      */
-    protected $_oclcid = [];
+    private $_oclcid = [];
 
     /**
      * @var string[]
      */
-    protected $_subjects = [];
+    private $_subjects = [];
 
     /**
      * @var string
      */
-    protected $_display_subject;
+    private $_display_subject;
 
     /**
      * @var string[]
      */
-    protected $_genres = [];
+    private $_genres = [];
 
     /**
      * @var string[]
      */
-    protected $_creator_facet = [];
+    private $_creator_facet = [];
 
     /**
      * @var string[]
      */
-    protected $_collection_facet = [];
+    private $_collection_facet = [];
 
     /**
      * @var string[]
      */
-    protected $_resourcetype_facet = [];
+    private $_resourcetype_facet = [];
 
     /**
      * @var string[]
      */
-    protected $_languages = [];
+    private $_languages = [];
 
     /**
      * @var string
      */
-    protected $_format;
+    private $_format;
 
     /**
      * @var string[]
      */
-    protected $_description;
+    private $_description = [];
 
     /**
      * @var string
      */
-    protected $_frbr_group_id;
+    private $_frbr_group_id;
 
     /**
      * @var string[]
      */
-    protected $_cover_images;
+    private $_cover_images = [];
 
     /**
      * @var Link[]
      */
-    protected $_link_to_resource;
+    private $_link_to_resource = [];
 
     /**
      * @var Link[]
      */
-    protected $_openurl;
+    private $_openurl = [];
 
     /**
      * @var Link[]
      */
-    protected $_openurl_fulltext;
+    private $_openurl_fulltext = [];
 
     /**
      * @var string
      */
-    protected $_sort_title;
+    private $_sort_title;
 
     /**
      * @var string
      */
-    protected $_sort_creator;
+    private $_sort_creator;
 
     /**
      * @var string
      */
-    protected $_sort_date;
+    private $_sort_date;
 
     /**
      * @var bool
      */
-    protected $_is_electronic;
+    private $_is_electronic = false;
 
     /**
      * @var bool
      */
-    protected $_is_physical;
+    private $_is_physical = false;
 
     /**
      * @var bool
      */
-    protected $_is_digital;
+    private $_is_digital = false;
 
     /**
      * @var array[]
      */
-    protected $_links;
+    private $_links = [];
 
     /**
      * @var Holding[]
      */
-    protected $_holdings;
+    private $_holdings = [];
 
     /**
      * Doc constructor.
@@ -292,20 +292,17 @@ class Doc
         return $result;
     }
 
-    /**
-     * @return string
-     */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->_id;
     }
 
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->_title;
     }
 
-    public function getCreator(): string
+    public function getCreator(): ?string
     {
         return $this->_creator;
     }
@@ -315,22 +312,22 @@ class Doc
         return $this->_contributors;
     }
 
-    public function getDate(): string
+    public function getDate(): ?string
     {
         return $this->_date;
     }
 
-    public function getPublisher(): string
+    public function getPublisher(): ?string
     {
         return $this->_publisher;
     }
 
-    public function getAbstract(): string
+    public function getAbstract(): ?string
     {
         return $this->_abstract;
     }
 
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->_type;
     }
@@ -355,7 +352,7 @@ class Doc
         return $this->_subjects;
     }
 
-    public function getDisplaySubject(): string
+    public function getDisplaySubject(): ?string
     {
         return $this->_display_subject;
     }
@@ -385,7 +382,7 @@ class Doc
         return $this->_languages;
     }
 
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
         return $this->_format;
     }
@@ -395,7 +392,7 @@ class Doc
         return $this->_description;
     }
 
-    public function getFrbrGroupId(): string
+    public function getFrbrGroupId(): ?string
     {
         return $this->_frbr_group_id;
     }
@@ -420,17 +417,17 @@ class Doc
         return $this->_openurl_fulltext;
     }
 
-    public function getSortTitle(): string
+    public function getSortTitle(): ?string
     {
         return $this->_sort_title;
     }
 
-    public function getSortCreator(): string
+    public function getSortCreator(): ?string
     {
         return $this->_sort_creator;
     }
 
-    public function getSortDate(): string
+    public function getSortDate(): ?string
     {
         return $this->_sort_date;
     }
@@ -458,6 +455,177 @@ class Doc
     public function getHoldings(): array
     {
         return $this->_holdings;
+    }
+
+    public function setId(?string $id): void
+    {
+        $this->_id = $id;
+    }
+
+    public function setTitle(?string $title): void
+    {
+        $this->_title = $title;
+    }
+
+    public function setCreator(?string $creator): void
+    {
+        $this->_creator = $creator;
+    }
+
+    public function setContributors(?array $contributors): void
+    {
+        $this->_contributors = $contributors;
+    }
+
+    public function setDate(?string $date): void
+    {
+        $this->_date = $date;
+    }
+
+    public function setPublisher(?string $publisher): void
+    {
+        $this->_publisher = $publisher;
+    }
+
+    public function setAbstract(?string $abstract): void
+    {
+        $this->_abstract = $abstract;
+    }
+
+    public function setType(?string $type): void
+    {
+        $this->_type = $type;
+    }
+
+    public function setIsbn(?array $isbn): void
+    {
+        $this->_isbn = $isbn;
+    }
+
+    public function setIssn(?array $issn): void
+    {
+        $this->_issn = $issn;
+    }
+
+    public function setOclcid(?array $oclcid): void
+    {
+        $this->_oclcid = $oclcid;
+    }
+
+    public function setSubjects(?array $subjects): void
+    {
+        $this->_subjects = $subjects;
+    }
+
+    public function setDisplaySubject(?string $display_subject): void
+    {
+        $this->_display_subject = $display_subject;
+    }
+
+    public function setGenres(?array $genres): void
+    {
+        $this->_genres = $genres;
+    }
+
+    public function setCreatorFacet(?array $creator_facet): void
+    {
+        $this->_creator_facet = $creator_facet;
+    }
+
+    public function setCollectionFacet(?array $collection_facet): void
+    {
+        $this->_collection_facet = $collection_facet;
+    }
+
+    public function setResourcetypeFacet(?array $resourcetype_facet): void
+    {
+        $this->_resourcetype_facet = $resourcetype_facet;
+    }
+
+    public function setLanguages(?array $languages): void
+    {
+        $this->_languages = $languages;
+    }
+
+    public function setFormat(?string $format): void
+    {
+        $this->_format = $format;
+    }
+
+    public function setDescription(?array $description): void
+    {
+        $this->_description = $description;
+    }
+
+    public function setFrbrGroupId(?string $frbr_group_id): void
+    {
+        $this->_frbr_group_id = $frbr_group_id;
+    }
+
+    public function setCoverImages(?array $cover_images): void
+    {
+        $this->_cover_images = $cover_images;
+    }
+
+    public function setLinkToResource(?array $link_to_resource): void
+    {
+        $this->_link_to_resource = $link_to_resource;
+    }
+
+    public function setOpenurl(?array $openurl): void
+    {
+        $this->_openurl = $openurl;
+    }
+
+    public function setOpenurlFulltext(?array $openurl_fulltext): void
+    {
+        $this->_openurl_fulltext = $openurl_fulltext;
+    }
+
+    public function setSortTitle(?string $sort_title): void
+    {
+        $this->_sort_title = $sort_title;
+    }
+
+    public function setSortCreator(?string $sort_creator): void
+    {
+        $this->_sort_creator = $sort_creator;
+    }
+
+    public function setSortDate(?string $sort_date): void
+    {
+        $this->_sort_date = $sort_date;
+    }
+
+    public function setIsElectronic(?bool $is_electronic): void
+    {
+        $this->_is_electronic = $is_electronic;
+    }
+
+    public function setIsPhysical(?bool $is_physical): void
+    {
+        $this->_is_physical = $is_physical;
+    }
+
+    public function setIsDigital(?bool $is_digital): void
+    {
+        $this->_is_digital = $is_digital;
+    }
+
+    public function setLinks(?array $links): void
+    {
+        $this->_links = $links;
+    }
+
+    public function setHoldings(?array $holdings): void
+    {
+        foreach ($holdings as $holding) {
+            if (!is_a($holding, Holding::class)) {
+                $type = is_object($holding) ? get_class($holding) : gettype($holding);
+                throw new InvalidArgumentException("Can't add $type to Holding list");
+            }
+        }
+        $this->_holdings = $holdings;
     }
 
     /**

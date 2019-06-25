@@ -26,10 +26,12 @@ class SearchTranslator
         $response->did_u_mean = $json->did_u_mean ?? null;
         $response->controlled_vocabulary = isset($json->info->controlledVocabulary) ? $json->info->controlledVocabulary->errorMessages[1] : null;
 
+        $facets = [];
         foreach ($json->facets as $facet_json) {
             $facet = FacetTranslator::translate($facet_json);
-            $response->facets[$facet->name] = $facet;
+            $facets[$facet->name] = $facet;
         }
+        $response->facets = $facets;
 
         $response->docs = array_map(
             function ($doc_json) {

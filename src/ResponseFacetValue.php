@@ -7,22 +7,47 @@ namespace BCLib\PrimoClient;
  *
  * Class ResponseFacetValue
  * @package BCLib\PrimoClient
+ *
+ * @property string value
+ * @property int count
  */
 class ResponseFacetValue
 {
-    /**
-     * @var string
-     */
-    public $value;
+    use GetterSetter;
 
     /**
      * @var string
      */
-    public $count;
+    private $_value;
+
+    /**
+     * @var string
+     */
+    private $_count;
 
     public function __construct(string $value, string $count)
     {
-        $this->value = $value;
-        $this->count = $count;
+        $this->_value = $value;
+        $this->_count = $count;
+    }
+
+    public function getValue(): string
+    {
+        return $this->_value;
+    }
+
+    public function setValue(string $value): void
+    {
+        $this->_value = $value;
+    }
+
+    public function getCount(): int
+    {
+        return $this->_count;
+    }
+
+    public function setCount(int $count): void
+    {
+        $this->_count = $count;
     }
 }

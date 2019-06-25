@@ -19,8 +19,7 @@ trait GetterSetter
         if (method_exists($this, $setter)) {
             $this->$setter($value);
         } else {
-            $prop = $this->getProperty($name);
-            $this->$prop = $value;
+            throw new BadPropertyException("$name is not a valid property on " . self::class);
         }
     }
 
