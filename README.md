@@ -29,7 +29,7 @@ $primo = \BCLib\PrimoClient\PrimoClient::build(
                                                 $config['gateway'],
                                                 $config['apikey'], 
                                                 $config['tab'],
-                                                $config['gateway'],
+                                                $config['vid'],
                                                 $config['scope']
                                                );
 $response = $primo->search('otters');
