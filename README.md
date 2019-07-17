@@ -18,6 +18,8 @@ Create a configuration hash and pass it to `PrimoClient::build()` to
 instantiate a client.
 
 ```php
+require_once __DIR__.'/vendor/autoload.php';
+
 $config = [
     'apikey' => 'l7xx38c6a1a3043974262e81a81fb7475ba9',
     'gateway' => 'https://api-na.hosted.exlibrisgroup.com',
@@ -33,6 +35,26 @@ $primo = \BCLib\PrimoClient\PrimoClient::build(
                                                 $config['scope']
                                                );
 $response = $primo->search('otters');
+```
+
+Passing a string to `search()` will perform a simple keyword search. For more complex searches, pass in a
+`SearchRequest` object:
+
+```php
+$request = $primo->getSearchRequest();
+
+$contains_manchurian_candidate = new \BCLib\PrimoClient\Query('any','contains','manchurian candidate');
+$contains_demme = new \BCLib\PrimoClient\Query('creator','contains','demme');
+
+$is_video = new \BCLib\PrimoClient\QueryFacet('facet_rtype','exact','video');
+
+$request->addQuery($contains_manchurian_candidate)
+    ->addQuery($contains_demme, 'NOT')
+    ->include($is_video)
+    ->sort('date')
+    ->limit(5);
+
+$response = $primo->search($request);
 ```
 
 The JSON structure of a SearchResponse can be accessed directly:

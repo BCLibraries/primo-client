@@ -63,18 +63,31 @@ class PrimoClient
     /**
      * Perform a search
      *
-     * @param string $keyword
+     * If the $request is a string, a simple keyword search is performed. For more complicated searches, pass
+     * in a SearchRequest.
+     *
+     * @param string|SearchRequest $request
      * @param QueryConfig|null $config
      * @return SearchResponse
      * @throws Exceptions\BadAPIResponseException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function search(string $keyword, QueryConfig $config = null): SearchResponse
+    public function search($request, QueryConfig $config = null): SearchResponse
     {
         $config = $config ?? $this->config;
-        $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $keyword);
-        $request = new SearchRequest($config, $query);
+
+        if (is_string($request)) {
+            $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $request);
+            $request = new SearchRequest($config, $query);
+        }
+
         $json = $this->api_client->get($request->url());
         return SearchTranslator::translate($json);
+    }
+
+    public function getSearchRequest(QueryConfig $config = null, Query $query = null): SearchRequest
+    {
+        $config = $config ?? $this->config;
+        return new SearchRequest($config, $query);
     }
 }
