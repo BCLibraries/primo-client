@@ -73,7 +73,7 @@ class PrimoClient
     {
         $config = $config ?? $this->config;
         $query = new Query(Query::FIELD_ANY, Query::PRECISION_CONTAINS, $keyword);
-        $request = new SearchRequest($query, $config);
+        $request = new SearchRequest($config, $query);
         $json = $this->api_client->get($request->url());
         return SearchTranslator::translate($json);
     }

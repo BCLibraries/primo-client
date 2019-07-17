@@ -32,7 +32,7 @@ class SearchRequestTest extends TestCase
         $query->method('__toString')
             ->willReturn('any,contains,otters');
 
-        $this->request = new SearchRequest($query, $config);
+        $this->request = new SearchRequest($config, $query);
 
         $query_output = 'any%2Ccontains%2Cotters';
         $this->expected_url = "/primo/v1/search?apikey=$apikey&vid=$vid&tab=$tab&scope=$scope&q=$query_output";
@@ -41,6 +41,51 @@ class SearchRequestTest extends TestCase
     public function testBasicRequestProducesCorrectURL(): void
     {
         $this->assertEquals($this->expected_url, $this->request->url());
+    }
+
+    public function testAddsQueries(): void
+    {
+        $not_query = $this->createMock(Query::class);
+        $not_query->method('__toString')
+            ->willReturn('any,contains,badgers');
+
+        $or_query = $this->createMock(Query::class);
+        $or_query->method('__toString')
+            ->willReturn('any,contains,ferrets');
+
+        $and_query = $this->createMock(Query::class);
+        $and_query->method('__toString')
+            ->willReturn('any,contains,weasels');
+
+        $this->request->addQuery($not_query, SearchRequest::OPERATOR_NOT)
+            ->addQuery($or_query, SearchRequest::OPERATOR_OR)
+            ->addQuery($and_query, SearchRequest::OPERATOR_AND);
+
+        $expected = $this->expected_url . '%2CNOT%3Bany%2Ccontains%2Cbadgers%2COR%3Bany%2Ccontains%2Cferrets%2CAND%3Bany%2Ccontains%2Cweasels';
+
+        $this->assertEquals($expected, $this->request->url());
+    }
+
+    public function testDefaultOperatorIsAnd(): void
+    {
+        $query = $this->createMock(Query::class);
+        $query->method('__toString')
+            ->willReturn('any,contains,badgers');
+
+        $this->request->addQuery($query);
+        $expected = $this->expected_url . '%2CAND%3Bany%2Ccontains%2Cbadgers';
+        $this->assertEquals($expected, $this->request->url());
+    }
+
+    public function testBadOperatorThrowsException()
+    {
+        $this->expectException(\BCLib\PrimoClient\Exceptions\InvalidArgumentException::class);
+
+        $query = $this->createMock(Query::class);
+        $query->method('__toString')
+            ->willReturn('any,contains,badgers');
+
+        $this->request->addQuery($query, 'mustelid');
     }
 
     public function testSetsControlledVocabulary(): void
@@ -158,31 +203,31 @@ class SearchRequestTest extends TestCase
         $f1->method('isExact')->willReturn(true);
         $f1->method('__toString')->willReturn('facet1');
         $this->request->include($f1);
-        $expected = $this->expected_url. '&qInclude=facet1';
+        $expected = $this->expected_url . '&qInclude=facet1';
         $this->assertEquals($expected, $this->request->url());
 
         $f2 = $this->createMock(QueryFacet::class);
         $f2->method('isExact')->willReturn(true);
         $f2->method('__toString')->willReturn('facet2');
         $this->request->include($f2);
-        $expected = $this->expected_url. '&qInclude=facet1%7C%2C%7Cfacet2';
+        $expected = $this->expected_url . '&qInclude=facet1%7C%2C%7Cfacet2';
         $this->assertEquals($expected, $this->request->url());
     }
 
     public function testMultiFacetSetCorrectly(): void
-{
-    $f1 = $this->createMock(QueryFacet::class);
-    $f1->method('isExact')->willReturn(false);
-    $f1->method('__toString')->willReturn('facet1');
-    $this->request->multiFacet($f1);
-    $expected = $this->expected_url. '&multiFacets=facet1';
-    $this->assertEquals($expected, $this->request->url());
+    {
+        $f1 = $this->createMock(QueryFacet::class);
+        $f1->method('isExact')->willReturn(false);
+        $f1->method('__toString')->willReturn('facet1');
+        $this->request->multiFacet($f1);
+        $expected = $this->expected_url . '&multiFacets=facet1';
+        $this->assertEquals($expected, $this->request->url());
 
-    $f2 = $this->createMock(QueryFacet::class);
-    $f2->method('isExact')->willReturn(false);
-    $f2->method('__toString')->willReturn('facet2');
-    $this->request->multiFacet($f2);
-    $expected = $this->expected_url. '&multiFacets=facet1%7C%2C%7Cfacet2';
-    $this->assertEquals($expected, $this->request->url());
-}
+        $f2 = $this->createMock(QueryFacet::class);
+        $f2->method('isExact')->willReturn(false);
+        $f2->method('__toString')->willReturn('facet2');
+        $this->request->multiFacet($f2);
+        $expected = $this->expected_url . '&multiFacets=facet1%7C%2C%7Cfacet2';
+        $this->assertEquals($expected, $this->request->url());
+    }
 }

@@ -14,7 +14,9 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  *             ->offset(3)
  *             ->exclude($language_is_english)
  *             ->exclude($date_is_after_1900)
- *             ->sort(SearchRequest::SORT_DATE);
+ *             ->sort(SearchRequest::SORT_DATE)
+ *             ->addQuery($title_contains_opera,SearchRequest::OPERATOR_AND)
+ *             ->addQuery($title_contains_german,SearchRequest::OPERATOR_NOT)
  *
  * Casting the item as a string or calling url() will return URL of the search from the path
  * forward, e.g.:
@@ -37,6 +39,10 @@ class SearchRequest
     public const SORT_AUTHOR = 'author';
     public const SORT_DATE = 'date';
 
+    public const OPERATOR_AND = 'AND';
+    public const OPERATOR_OR = 'OR';
+    public const OPERATOR_NOT = 'NOT';
+
     /**
      * Stores URL query string parameters. Key is parameter name, value is the string representation of
      * parameter value as used in the Primo REST API.
@@ -45,7 +51,7 @@ class SearchRequest
      */
     private $params = [];
 
-    public function __construct(Query $query, QueryConfig $config)
+    public function __construct(QueryConfig $config, Query $query = null)
     {
         $this->params = [
             'apikey' => $config->apikey,
@@ -53,8 +59,10 @@ class SearchRequest
             'tab' => $config->tab,
             'scope' => $config->scope,
             'inst' => $config->inst,
-            'q' => (string)$query
+            'q' => ''
         ];
+
+        $this->addQuery($query);
     }
 
     /**
@@ -67,6 +75,33 @@ class SearchRequest
     {
         $params = array_filter($this->params, [$this, 'isSet']);
         return "/primo/$version/search?" . http_build_query($params);
+    }
+
+    /**
+     * Add a query to the search
+     *
+     * @param Query $query
+     * @param string $operator
+     * @return $this
+     */
+    public function addQuery(Query $query, $operator = self::OPERATOR_AND)
+    {
+        $valid_ops = [
+            self::OPERATOR_AND,
+            self::OPERATOR_OR,
+            self::OPERATOR_NOT
+        ];
+
+        if (!in_array($operator, $valid_ops, true)) {
+            throw new InvalidArgumentException("$operator is not valid search operator");
+        }
+
+        if ($this->params['q'] === '') {
+            $this->params['q'] = (string)$query;
+        } else {
+            $this->params['q'] .= ",$operator;$query";
+        }
+        return $this;
     }
 
     /**
