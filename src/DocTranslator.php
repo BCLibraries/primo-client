@@ -103,5 +103,8 @@ class DocTranslator
         $doc->sort_creator = empty($sort->author) ? null : $sort->author[0];
         $doc->sort_date = empty($sort->creationdate) ? null : $sort->creationdate[0];
         $doc->sort_title = empty($sort->title) ? null : $sort->title[0];
+
+        $doc->is_part_of = $display->ispartof ?? [];
+        $doc->journal_title = $addata->jtitle ?? [];
     }
 }

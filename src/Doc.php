@@ -62,6 +62,8 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  * @property bool is_digital
  * @property array links
  * @property Holding[] holdings
+ * @property string[] journal_title
+ * @property string[] is_part_of
  *
  * @package BCLib\PrimoClient
  */
@@ -242,6 +244,16 @@ class Doc
     private $_holdings = [];
 
     /**
+     * @var string[]
+     */
+    private $_is_part_of = [];
+
+    /**
+     * @var string[]
+     */
+    private $_journal_title = [];
+
+    /**
      * Doc constructor.
      *
      * @param \stdClass $doc_json doc JSON, as output by json_decode
@@ -296,7 +308,7 @@ class Doc
     {
         return $this->_id;
     }
-    
+
     public function getTitle(): ?string
     {
         return $this->_title;
@@ -379,6 +391,7 @@ class Doc
     {
         return $this->_genres;
     }
+
     /**
      * @return string[]
      */
@@ -677,6 +690,33 @@ class Doc
         }
         $this->_holdings = $holdings;
     }
+
+    /**
+     * @return string[]
+     */
+    public function getIsPartOf(): array
+    {
+        return $this->_is_part_of;
+    }
+
+    public function setIsPartOf(array $is_part_of): void
+    {
+        $this->_is_part_of = $is_part_of;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getJournalTitle(): array
+    {
+        return $this->_journal_title;
+    }
+
+    public function setJournalTitle(array $journal_title): void
+    {
+        $this->_journal_title = $journal_title;
+    }
+
 
     /**
      * Read a multi-item PNX entries
