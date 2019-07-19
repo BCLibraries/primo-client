@@ -17,17 +17,17 @@ class Link
     /**
      * @var string
      */
-    private $_label;
+    protected $_label;
 
     /**
      * @var string
      */
-    private $_url;
+    protected $_url;
 
     /**
      * @var string
      */
-    private $_type;
+    protected $_type;
 
     public function __construct(string $label, string $url, string $type)
     {

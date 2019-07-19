@@ -37,13 +37,13 @@ class SearchResponse
     /**
      * @var Doc[]
      */
-    private $_docs;
-    private $_facets;
-    private $_total;
-    private $_last;
-    private $_first;
-    private $_did_u_mean;
-    private $_controlled_vocabulary;
+    protected $_docs;
+    protected $_facets;
+    protected $_total;
+    protected $_last;
+    protected $_first;
+    protected $_did_u_mean;
+    protected $_controlled_vocabulary;
 
     /**
      * The original JSON of the search response in default json_decode output

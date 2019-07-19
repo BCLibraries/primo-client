@@ -18,12 +18,12 @@ class ResponseFacet
     /**
      * @var string
      */
-    private $_name;
+    protected $_name;
 
     /**
      * @var ResponseFacetValue[]
      */
-    private $_values = [];
+    protected $_values = [];
 
     public function __construct(string $name)
     {

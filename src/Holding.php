@@ -22,32 +22,32 @@ class Holding
     /**
      * @var string
      */
-    private $_ils_id;
+    protected $_ils_id;
 
     /**
      * @var string
      */
-    private $_library_code;
+    protected $_library_code;
 
     /**
      * @var string
      */
-    private $_location_code;
+    protected $_location_code;
 
     /**
      * @var string
      */
-    private $_location_display;
+    protected $_location_display;
 
     /**
      * @var string
      */
-    private $_call_number;
+    protected $_call_number;
 
     /**
      * @var string
      */
-    private $_availability_status;
+    protected $_availability_status;
 
     public function __construct(
         string $ils_id,

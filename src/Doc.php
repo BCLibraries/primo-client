@@ -81,177 +81,177 @@ class Doc
     /**
      * @var string
      */
-    private $_id;
+    protected $_id;
 
     /**
      * @var string
      */
-    private $_title;
+    protected $_title;
 
     /**
      * @var string
      */
-    private $_creator;
+    protected $_creator;
 
     /**
      * @var string[]
      */
-    private $_contributors = [];
+    protected $_contributors = [];
 
     /**
      * @var string
      */
-    private $_date;
+    protected $_date;
 
     /**
      * @var string
      */
-    private $_publisher;
+    protected $_publisher;
 
     /**
      * @var string
      */
-    private $_abstract;
+    protected $_abstract;
 
     /**
      * @var string
      */
-    private $_type;
+    protected $_type;
 
     /**
      * @var string[]
      */
-    private $_isbn = [];
+    protected $_isbn = [];
 
     /**
      * @var string[]
      */
-    private $_issn = [];
+    protected $_issn = [];
 
     /**
      * @var string[]
      */
-    private $_oclcid = [];
+    protected $_oclcid = [];
 
     /**
      * @var string[]
      */
-    private $_subjects = [];
+    protected $_subjects = [];
 
     /**
      * @var string
      */
-    private $_display_subject;
+    protected $_display_subject;
 
     /**
      * @var string[]
      */
-    private $_genres = [];
+    protected $_genres = [];
 
     /**
      * @var string[]
      */
-    private $_creator_facet = [];
+    protected $_creator_facet = [];
 
     /**
      * @var string[]
      */
-    private $_collection_facet = [];
+    protected $_collection_facet = [];
 
     /**
      * @var string[]
      */
-    private $_resourcetype_facet = [];
+    protected $_resourcetype_facet = [];
 
     /**
      * @var string[]
      */
-    private $_languages = [];
+    protected $_languages = [];
 
     /**
      * @var string
      */
-    private $_format;
+    protected $_format;
 
     /**
      * @var string[]
      */
-    private $_description = [];
+    protected $_description = [];
 
     /**
      * @var string
      */
-    private $_frbr_group_id;
+    protected $_frbr_group_id;
 
     /**
      * @var string[]
      */
-    private $_cover_images = [];
+    protected $_cover_images = [];
 
     /**
      * @var Link[]
      */
-    private $_link_to_resource = [];
+    protected $_link_to_resource = [];
 
     /**
      * @var Link[]
      */
-    private $_openurl = [];
+    protected $_openurl = [];
 
     /**
      * @var Link[]
      */
-    private $_openurl_fulltext = [];
+    protected $_openurl_fulltext = [];
 
     /**
      * @var string
      */
-    private $_sort_title;
+    protected $_sort_title;
 
     /**
      * @var string
      */
-    private $_sort_creator;
+    protected $_sort_creator;
 
     /**
      * @var string
      */
-    private $_sort_date;
+    protected $_sort_date;
 
     /**
      * @var bool
      */
-    private $_is_electronic = false;
+    protected $_is_electronic = false;
 
     /**
      * @var bool
      */
-    private $_is_physical = false;
+    protected $_is_physical = false;
 
     /**
      * @var bool
      */
-    private $_is_digital = false;
+    protected $_is_digital = false;
 
     /**
      * @var array[]
      */
-    private $_links = [];
+    protected $_links = [];
 
     /**
      * @var Holding[]
      */
-    private $_holdings = [];
+    protected $_holdings = [];
 
     /**
      * @var string[]
      */
-    private $_is_part_of = [];
+    protected $_is_part_of = [];
 
     /**
      * @var string[]
      */
-    private $_journal_title = [];
+    protected $_journal_title = [];
 
     /**
      * Doc constructor.

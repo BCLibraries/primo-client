@@ -18,12 +18,12 @@ class ResponseFacetValue
     /**
      * @var string
      */
-    private $_value;
+    protected $_value;
 
     /**
      * @var string
      */
-    private $_count;
+    protected $_count;
 
     public function __construct(string $value, string $count)
     {
