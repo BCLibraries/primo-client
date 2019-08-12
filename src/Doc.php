@@ -256,7 +256,7 @@ class Doc
     /**
      * @var bool
      */
-    protected $_availble;
+    protected $_available;
 
     /**
      * Doc constructor.
@@ -748,13 +748,13 @@ class Doc
         return $result;
     }
 
-    public function isAvailble(): bool
+    public function isAvailable(): bool
     {
-        return $this->_availble;
+        return $this->_available;
     }
 
-    public function setAvailble(bool $availble): void
+    public function setAvailable(bool $availble): void
     {
-        $this->_availble = $availble;
+        $this->_available = $availble;
     }
 }
