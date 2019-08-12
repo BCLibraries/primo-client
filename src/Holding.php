@@ -145,6 +145,9 @@ class Holding
         $this->library_display = $library_display;
     }
 
+    /**
+     * @return Item[]
+     */
     public function getItems(): array
     {
         return $this->items;
