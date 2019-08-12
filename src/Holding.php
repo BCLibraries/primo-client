@@ -49,6 +49,16 @@ class Holding
      */
     protected $_availability_status;
 
+    /**
+     * @var string
+     */
+    protected $library_display;
+
+    /**
+     * @var Item[]
+     */
+    protected $items = [];
+
     public function __construct(
         string $ils_id,
         string $library_code,
@@ -123,5 +133,25 @@ class Holding
     public function setAvailabilityStatus(string $availability_status): void
     {
         $this->_availability_status = $availability_status;
+    }
+
+    public function getLibraryDisplay(): ?string
+    {
+        return $this->library_display;
+    }
+
+    public function setLibraryDisplay(string $library_display): void
+    {
+        $this->library_display = $library_display;
+    }
+
+    public function getItems(): array
+    {
+        return $this->items;
+    }
+
+    public function addItem(Item $item): void
+    {
+        $this->items[] = $item;
     }
 }

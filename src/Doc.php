@@ -254,6 +254,11 @@ class Doc
     protected $_journal_title = [];
 
     /**
+     * @var bool
+     */
+    protected $_availble;
+
+    /**
      * Doc constructor.
      *
      * @param \stdClass $doc_json doc JSON, as output by json_decode
@@ -741,5 +746,15 @@ class Doc
             $result[$matches[2]] = $matches[1];
         }
         return $result;
+    }
+
+    public function isAvailble(): bool
+    {
+        return $this->_availble;
+    }
+
+    public function setAvailble(bool $availble): void
+    {
+        $this->_availble = $availble;
     }
 }
