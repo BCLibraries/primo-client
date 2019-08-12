@@ -722,6 +722,16 @@ class Doc
         $this->_journal_title = $journal_title;
     }
 
+    public function isAvailable(): ?bool
+    {
+        return $this->_available;
+    }
+
+    public function setAvailable(bool $availble): void
+    {
+        $this->_available = $availble;
+    }
+
 
     /**
      * Read a multi-item PNX entries
@@ -746,15 +756,5 @@ class Doc
             $result[$matches[2]] = $matches[1];
         }
         return $result;
-    }
-
-    public function isAvailable(): bool
-    {
-        return $this->_available;
-    }
-
-    public function setAvailable(bool $availble): void
-    {
-        $this->_available = $availble;
     }
 }
