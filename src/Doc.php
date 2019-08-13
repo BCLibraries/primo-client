@@ -448,7 +448,7 @@ class Doc
     }
 
     /**
-     * @return string[]
+     * @return Link[]
      */
     public function getCoverImages(): array
     {

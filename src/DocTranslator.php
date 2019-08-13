@@ -33,14 +33,20 @@ class DocTranslator
         $json = $doc->json;
         $processed_links = [];
         foreach ($json->delivery->link as $link) {
+            // Skip blank URLs
+            if ($link->linkURL === '') {
+                continue;
+            }
+
             $type = str_replace('http://purl.org/pnx/linkType/', '', $link->linkType);
             $processed_links[$type] = $processed_links[$type] ?? [];
             $processed_links[$type][] = new Link($link->displayLabel, $link->linkURL, $type);
         }
-        $doc->links = $processed_links;
-        $doc->link_to_resource = $doc->links['linktorsrc'] ?? [];
-        $doc->openurl = $doc->links['openurl'] ?? [];
-        $doc->openurl_fulltext = $doc->links['openurlfulltext'] ?? [];
+        $doc->setLinks($processed_links);
+        $doc->setLinkToResource($doc->links['linktorsrc'] ?? []);
+        $doc->setOpenurl($doc->links['openurl'] ?? []);
+        $doc->setOpenurlFulltext($doc->links['openurlfulltext'] ?? []);
+        $doc->setCoverImages($processed_links['thumbnail']);
     }
 
     private static function processHoldings(Doc $doc): void
