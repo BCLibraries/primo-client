@@ -70,8 +70,7 @@ class Query
      */
     public function __toString()
     {
-        $encoded_value = urlencode($this->value);
-        return "{$this->field},{$this->precision},$encoded_value";
+        return "{$this->field},{$this->precision},{$this->value}";
     }
 
     /**
