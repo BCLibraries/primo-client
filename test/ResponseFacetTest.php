@@ -11,7 +11,7 @@ class ResponseFacetTest extends TestCase
      */
     public $facet;
 
-    public function setUp()
+    public function setUp():void
     {
         $this->facet = new ResponseFacet('topic');
         $this->facet->values = [

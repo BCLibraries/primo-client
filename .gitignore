@@ -1,2 +1,5 @@
 /config.php
 vendor
+
+# PHPUnit cache files
+.phpunit.result.cache

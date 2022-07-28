@@ -3,6 +3,7 @@
   "description": "A client for Ex Libris' Primo REST API",
   "minimum-stability": "stable",
   "license": "MIT",
+  "version": "0.7.0",
   "authors": [
     {
       "name": "Ben Florin",
@@ -15,12 +16,12 @@
     }
   },
   "require": {
-    "php": ">=7.1.0",
-    "guzzlehttp/guzzle": "~6.0",
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.0",
     "ext-json": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7",
+    "phpunit/phpunit": "^9.0",
     "roave/security-advisories": "dev-master"
   }
 }

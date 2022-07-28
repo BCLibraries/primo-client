@@ -19,7 +19,7 @@ class SearchRequestTest extends TestCase
      */
     private $expected_url;
 
-    public function setUp()
+    public function setUp(): void
     {
         $apikey = 'l7xx38c6a1a3043974262e81a81fb7475ba9';
         $vid = 'bclib';

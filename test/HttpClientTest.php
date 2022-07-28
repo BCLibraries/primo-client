@@ -32,8 +32,9 @@ class HttpClientTest extends TestCase
     {
         $this->expectException(BadAPIResponseException::class);
         $bad_request = new Request('GET', '/test');
+        $bad_response = new Response();
         $mock = new MockHandler([
-            new BadResponseException('test', $bad_request)
+            new BadResponseException('test', $bad_request, $bad_response)
         ]);
         $handler = HandlerStack::create($mock);
         $http_client = new ApiClient(new Client(['handler' => $handler]));
