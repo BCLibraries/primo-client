@@ -33,7 +33,7 @@ class Link
     {
         $this->_label = $label;
         $this->_url = $url;
-        $this->type = $type;
+        $this->_type = $type;
     }
 
     public function getLabel(): string
