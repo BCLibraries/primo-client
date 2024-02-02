@@ -8,10 +8,7 @@ use PHPUnit\Framework\TestCase;
 /** @covers \BCLib\PrimoClient\Doc */
 class DocTest extends TestCase
 {
-    /**
-     * @var Doc
-     */
-    protected $doc;
+    protected Doc $doc;
 
     protected function setUp(): void
     {
@@ -376,6 +373,71 @@ class DocTest extends TestCase
         $this->assertEquals([$holding], $this->doc->getHoldings());
     }
 
+    /**
+     * @covers Doc::setTopLevelFacets
+     * @covers Doc::getTopLevelFacets
+     */
+    public function testGetAndSetTopLevelFacets(): void
+    {
+        $top_level = ['available', 'online_resource'];
+        $this->assertEquals([], $this->doc->getTopLevelFacets());
+        $this->doc->setTopLevelFacets($top_level);
+        $this->assertEquals($top_level, $this->doc->top_level_facets);
+    }
+
+    /**
+     * @covers Doc::isPeerReviewed
+     */
+    public function testIsPeerReviewed(): void
+    {
+        $top_level_without_peer_review = ['available', 'online_resource'];
+        $this->doc->setTopLevelFacets($top_level_without_peer_review);
+        $this->assertFalse($this->doc->is_peer_reviewed);
+
+        $top_level_with_peer_review = ['peer_reviewed', 'online_resource'];
+        $this->doc->setTopLevelFacets($top_level_with_peer_review);
+        $this->assertTrue($this->doc->is_peer_reviewed);
+    }
+
+    /**
+     * @covers Doc::isOnlineResource
+     */
+    public function testIsOnlineResource(): void
+    {
+        $top_level_not_online_resource = ['available'];
+        $this->doc->setTopLevelFacets($top_level_not_online_resource);
+        $this->assertFalse($this->doc->is_online_resource);
+
+        $top_level_is_online_resource = ['peer_reviewed', 'online_resources'];
+        $this->doc->setTopLevelFacets($top_level_is_online_resource);
+        $this->assertTrue($this->doc->is_online_resource);
+    }
+
+    /**
+     * @covers Doc::setSourceType
+     * @covers Doc::getSourceType
+     */
+    public function testGetAndSetSourceType(): void
+    {
+        $source_type = ['Aggregation Database'];
+        $this->assertEquals([], $this->doc->getSourceType());
+        $this->doc->setSourceType($source_type);
+        $this->assertEquals($source_type, $this->doc->getSourceType());
+    }
+
+    /**
+     * @covers Doc::isOpenAccess()
+     */
+    public function testIsOpenAccess(): void
+    {
+        $source_type = ['Aggregation Database'];
+        $this->doc->setSourceType($source_type);
+        $this->assertFalse($this->doc->is_open_access);
+
+        $source_type = ['Open Access Repository'];
+        $this->doc->setSourceType($source_type);
+        $this->assertTrue($this->doc->is_open_access);
+    }
 
     public function testAddingNonHoldingToHoldingsThrowsException(): void
     {

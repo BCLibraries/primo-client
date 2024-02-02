@@ -1,0 +1,631 @@
+{
+  "enrichment": {
+    "virtualBrowseObject": {
+      "callNumber": "",
+      "isVirtualBrowseEnabled": false,
+      "callNumberBrowseField": "browse_callnumber"
+    }
+  },
+  "delivery": {
+    "availabilityLinks": [
+      "detailsGetit1"
+    ],
+    "physicalItemTextCodes": "",
+    "displayLocation": false,
+    "availabilityLinksUrl": [
+      ""
+    ],
+    "link": [
+      {
+        "displayLabel": "openurl",
+        "hyperlinkText": "",
+        "inst4opac": "BCL",
+        "linkURL": "errorPage",
+        "linkType": "http://purl.org/pnx/linkType/openurl",
+        "@id": "_:0"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "hyperlinkText": "",
+        "inst4opac": "BCL",
+        "linkURL": "https://proxy-na.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?issn=1435-9448/MC.JPG&client=primo",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:1"
+      },
+      {
+        "displayLabel": " View this record in MEDLINE/PubMed",
+        "hyperlinkText": " View this record in MEDLINE/PubMed",
+        "inst4opac": "BCL",
+        "linkURL": "https://www.ncbi.nlm.nih.gov/pubmed/28840405",
+        "linkType": "http://purl.org/pnx/linkType/backlink",
+        "@id": "_:2"
+      },
+      {
+        "displayLabel": "openurlfulltext",
+        "hyperlinkText": "",
+        "inst4opac": "BCL",
+        "linkURL": "errorPage",
+        "linkType": "http://purl.org/pnx/linkType/openurlfulltext",
+        "@id": "_:3"
+      },
+      {
+        "displayLabel": "thumbnail",
+        "linkURL": "https://proxy-na.hosted.exlibrisgroup.com/exl_rewrite/syndetics.com/index.aspx?issn=1435-9448/MC.JPG&client=primo",
+        "linkType": "http://purl.org/pnx/linkType/thumbnail",
+        "@id": "_:4"
+      }
+    ],
+    "availability": [
+      "fulltext"
+    ],
+    "additionalLocations": false,
+    "displayedAvailability": "fulltext",
+    "holding": [],
+    "deliveryCategory": [
+      "Remote Search Resource"
+    ],
+    "serviceMode": [
+      "activate"
+    ],
+    "feDisplayOtherLocations": false,
+    "GetIt2": {
+      "isLinktoOnline": false,
+      "displayText": "Almagetit_remote",
+      "hyperlinkText": "",
+      "getItTabText": "alma_tab2_full",
+      "link": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2024-02-01T13%3A13%3A04IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-gale_scopu&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Cooperative%20problem%20solving%20in%20giant%20otters%20(Pteronura%20brasiliensis)%20and%20Asian%20small-clawed%20otters%20(Aonyx%20cinerea)&rft.jtitle=Animal%20cognition&rft.au=Schmelz,%20Martin&rft.date=2017-11-01&rft.volume=20&rft.issue=6&rft.spage=1107&rft.epage=1114&rft.pages=1107-1114&rft.issn=1435-9448&rft_id=info:doi/10.1007/s10071-017-1126-2&rft.object_id=;&rft.pub=Springer%20Berlin%20Heidelberg&amp;rft.place=Berlin/Heidelberg&rft.stitle=Anim%20Cogn&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/&rft_id=info:pmid/28840405&rft_id=info:eric/&rft_dat=%3Cgale_scopu%3EA509486020%3C/gale_scopu%3E,language=eng,view=bclib_new&lt;gale_scopu&gt;A509486020&lt;/gale_scopu&gt;,language=eng,view=bclib_new&svc_dat=getit&user_ip=136.167.43.72&rft_pqid=1951218667&req.skin=bclib_new&rft_galeid=A509486020",
+      "@id": "_:0",
+      "serviceModeGetit2": "activate"
+    },
+    "GetIt1": [
+      {
+        "links": [
+          {
+            "isLinktoOnline": false,
+            "displayText": "Almaviewit_remote",
+            "hyperlinkText": "",
+            "getItTabText": "alma_tab1_findit",
+            "link": "https://bc.userservices.exlibrisgroup.com/view/uresolver/01BC_INST/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=10_1&ctx_tim=2024-02-01T13%3A13%3A04IST&ctx_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com-gale_scopu&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Cooperative%20problem%20solving%20in%20giant%20otters%20(Pteronura%20brasiliensis)%20and%20Asian%20small-clawed%20otters%20(Aonyx%20cinerea)&rft.jtitle=Animal%20cognition&rft.au=Schmelz,%20Martin&rft.date=2017-11-01&rft.volume=20&rft.issue=6&rft.date=2017-11-01&rft.spage=1107&rft.epage=1114&rft.pages=1107-1114&rft.issn=1435-9448&rft.eissn=1435-9456&rft_id=info:doi/10.1007/s10071-017-1126-2&A509486020%3C/gale_scopu%3E&rft.pub=Springer%20Berlin%20Heidelberg&rft.place=Berlin/Heidelberg&rft_dat=%3Cgale_scopu%3EA509486020%3C/gale_scopu%3E,language=eng,view=bclib_new&rft.stitle=Anim%20Cogn&rft_id=info:bibcode/&rft_id=info:hdl/&rft_id=info:lccn/&rft_id=info:oclcnum/&rft_id=info:pmid/28840405&rft_id=info:eric/&svc_dat=viewit&rft_pqid=1951218667&rft_galeid=A509486020",
+            "@id": "_:0"
+          }
+        ],
+        "category": "Remote Search Resource"
+      }
+    ]
+  },
+  "context": "PC",
+  "adaptor": "primo_central_multiple_fe",
+  "pnx": {
+    "delivery": {
+      "fulltext": [
+        "fulltext"
+      ],
+      "delcategory": [
+        "Remote Search Resource"
+      ]
+    },
+    "search": {
+      "sourceid": [
+        "C6C",
+        "BKL",
+        "GYRTJ"
+      ],
+      "creatorcontrib": [
+        "Schmelz, Martin",
+        "Duguid, Shona",
+        "Bohn, Manuel",
+        "Völter, Christoph J."
+      ],
+      "creator": [
+        "Schmelz, Martin",
+        "Duguid, Shona",
+        "Bohn, Manuel",
+        "Völter, Christoph J."
+      ],
+      "creationdate": [
+        "2017"
+      ],
+      "subject": [
+        "Analysis",
+        "Animal cognition",
+        "Animals",
+        "Asian small-clawed otter",
+        "Behavioral Sciences",
+        "Biomedical and Life Sciences",
+        "Birds",
+        "Cognition",
+        "Cognitive ability",
+        "Cooperation",
+        "Ecological monitoring",
+        "Ecology",
+        "Evolution",
+        "Female",
+        "Giant otter",
+        "Life Sciences",
+        "Life Sciences & Biomedicine",
+        "Loose string task",
+        "Lutrinae",
+        "Male",
+        "Mammals",
+        "Original Paper",
+        "Otters",
+        "Otters - psychology",
+        "Primates",
+        "Problem Solving",
+        "Psychology Research",
+        "Science & Technology",
+        "Social Behavior",
+        "Social cognition",
+        "Social interactions",
+        "Species",
+        "Zoology"
+      ],
+      "rsrctype": [
+        "article"
+      ],
+      "description": [
+        "Cooperative problem solving has gained a lot of attention over the past two decades, but the range of species studied is still small. This limits the possibility of understanding the evolution of the socio-cognitive underpinnings of cooperation. Lutrinae show significant variations in socio-ecology, but their cognitive abilities are not well studied. In the first experimental study of otter social cognition, we presented two species\u2014giant otters and Asian small-clawed otters\u2014with a cooperative problem-solving task. The loose string task requires two individuals to simultaneously pull on either end of a rope in order to access food. This task has been used with a larger number of species (for the most part primates and birds) and thus allows for wider cross-species comparison. We found no differences in performance between species. Both giant otters and Asian small-clawed otters were able to solve the task successfully when the coordination requirements were minimal. However, when the temporal coordination demands were increased, performance decreased either due to a lack of understanding of the role of a partner or due to difficulty inhibiting action. In conclusion, two species of otters show some ability to cooperate, quite similar to most other species presented with the same task. However, to draw further conclusions and more nuanced comparisons between the two otter species, further studies with varied methodologies will be necessary."
+      ],
+      "title": [
+        "Cooperative problem solving in giant otters (Pteronura brasiliensis) and Asian small-clawed otters (Aonyx cinerea)",
+        "Animal cognition"
+      ],
+      "startdate": [
+        "20171101"
+      ],
+      "addtitle": [
+        "Anim Cogn",
+        "ANIM COGN",
+        "Anim Cogn"
+      ],
+      "recordid": [
+        "eNqNkl1rFDEUhgdR7If9Ad5ooDctOprPSeZGWAa_oKAXeh0ymcw2JZusSWbb_nsz7HZbC0JzkQTO856cnPccVSdqypfGZ6tVNkNVvUbwA4KQf0zzjmqIeI0Qbmr8rDpElLC6pax5vr9TcVAdpXQFIRS0RS-rAywEhRSywyp2IaxNVNluDFjH0DuzAim4jfVLYD1YWuUzCDmbmMDZz3IEP0UF-qiSddb4ZNM5UH4Ai1RQkFbKuVo7dW2GvWwR_O0N0NabaNT5q-rFqFwyJ7vzuPr95fOv7lt98ePr925xUWtGRK4Ja3szcqZ7ToceY8E4JgM2WCiiFRmavmc9b3krSlRAPCioBeYtGdk4UMXIcfVpm3c99Ssz6NLBqJxcR7tS8VYGZeW_EW8v5TJsJGso5BSXBGe7BDH8mUzKcmWTNs4pb8KUJGoJFhQ1vCno6SP0KkzRl-8ViiGMRNPwe2qpnJHWj6G8q-ekcsFgS0UDMSwU2lI6hpSiGfclIyhnx-XWd1l8l7Pvci71zcO_7hV3Rhfg3Ra4Nn0Yky7OabPHymRQhEsBcF5tocXT6c7mMj7Bd2HyuUjfbqVJh3Vp0p2oQQUnoqX3bX1EYJmwhFIwiAXBmIq56vdPRGW-md_GO7yAfmniAxf-27q_UEMEgg"
+      ],
+      "general": [
+        "Springer Berlin Heidelberg",
+        "Springer Nature",
+        "Springer",
+        "Springer Nature B.V"
+      ],
+      "enddate": [
+        "20171101"
+      ],
+      "issn": [
+        "1435-9448",
+        "1435-9456"
+      ],
+      "orcidid": [
+        "https://orcid.org/0000-0003-4844-0673",
+        "https://orcid.org/0000-0002-3536-8177",
+        "https://orcid.org/0000-0001-6006-1348"
+      ],
+      "scope": [
+        "C6C",
+        "BKL",
+        "BLEPL",
+        "DTL",
+        "GYRTJ",
+        "CGR",
+        "CUY",
+        "CVF",
+        "ECM",
+        "EIF",
+        "NPM",
+        "AAYXX",
+        "CITATION",
+        "3V.",
+        "7QG",
+        "7SN",
+        "7TK",
+        "7X7",
+        "7XB",
+        "88E",
+        "88G",
+        "8FI",
+        "8FJ",
+        "8FK",
+        "8G5",
+        "AAENX",
+        "AAFGM",
+        "ABUWG",
+        "ACNYV",
+        "ADAJB",
+        "ADFQN",
+        "ADZZV",
+        "AFCXM",
+        "AFKRA",
+        "AFOLM",
+        "AGAJT",
+        "AGBVP",
+        "AHFST",
+        "AZQEC",
+        "BENPR",
+        "C1K",
+        "DWQXO",
+        "FYUFA",
+        "GHDGH",
+        "GNUQQ",
+        "GUQSH",
+        "K9.",
+        "M0S",
+        "M1P",
+        "M2M",
+        "M2O",
+        "MBDVC",
+        "PQCXX",
+        "PQEST",
+        "PQQKQ",
+        "PQUKI",
+        "PRINS",
+        "PRLXX",
+        "PSYQQ",
+        "Q9U",
+        "7X8",
+        "5PM"
+      ],
+      "recordtype": [
+        "article"
+      ],
+      "fulltext": [
+        "true"
+      ]
+    },
+    "display": {
+      "snippet": [
+        "Cooperative problem solving has gained a lot of attention over the past two decades, but the range of species studied is still small...",
+        ".... In the first experimental study of otter social cognition, we presented two species-giant otters and Asian small-clawed otters-with a cooperative problem-solving task..."
+      ],
+      "identifier": [
+        "ISSN: 1435-9448",
+        "EISSN: 1435-9456",
+        "DOI: 10.1007/s10071-017-1126-2",
+        "PMID: 28840405"
+      ],
+      "creator": [
+        "Schmelz, Martin ; Duguid, Shona ; Bohn, Manuel ; Völter, Christoph J."
+      ],
+      "citedby": [
+        "FETCH-LOGICAL-c538t-359bef75cb74db2285723d2e28a3ca3d6bb5b79798db2802da0c82793f5fd4a53"
+      ],
+      "subject": [
+        "Analysis ; Animal cognition ; Animals ; Asian small-clawed otter ; Behavioral Sciences ; Biomedical and Life Sciences ; Birds ; Cognition ; Cognitive ability ; Cooperation ; Ecological monitoring ; Ecology ; Evolution ; Female ; Giant otter ; Life Sciences ; Life Sciences & Biomedicine ; Loose string task ; Lutrinae ; Male ; Mammals ; Original Paper ; Otters ; Otters - psychology ; Primates ; Problem Solving ; Psychology Research ; Science & Technology ; Social Behavior ; Social cognition ; Social interactions ; Species ; Zoology"
+      ],
+      "ispartof": [
+        "Animal cognition, 2017, Vol.20 (6), p.1107-1114"
+      ],
+      "description": [
+        "Cooperative problem solving has gained a lot of attention over the past two decades, but the range of species studied is still small. This limits the possibility of understanding the evolution of the socio-cognitive underpinnings of cooperation. Lutrinae show significant variations in socio-ecology, but their cognitive abilities are not well studied. In the first experimental study of otter social cognition, we presented two species\u2014giant otters and Asian small-clawed otters\u2014with a cooperative problem-solving task. The loose string task requires two individuals to simultaneously pull on either end of a rope in order to access food. This task has been used with a larger number of species (for the most part primates and birds) and thus allows for wider cross-species comparison. We found no differences in performance between species. Both giant otters and Asian small-clawed otters were able to solve the task successfully when the coordination requirements were minimal. However, when the temporal coordination demands were increased, performance decreased either due to a lack of understanding of the role of a partner or due to difficulty inhibiting action. In conclusion, two species of otters show some ability to cooperate, quite similar to most other species presented with the same task. However, to draw further conclusions and more nuanced comparisons between the two otter species, further studies with varied methodologies will be necessary."
+      ],
+      "language": [
+        "eng"
+      ],
+      "source": [
+        "Scopus",
+        "Springer LINK Contemporary",
+        "Web of Science - Science Citation Index Expanded - 2017<img src=\"https://exlibris-pub.s3.amazonaws.com/fromwos-v2.jpg\" />"
+      ],
+      "type": [
+        "article"
+      ],
+      "title": [
+        "Cooperative problem solving in giant otters (Pteronura brasiliensis) and Asian small-clawed otters (Aonyx cinerea)"
+      ],
+      "scopuscitedreferencesoriginalsourcerecordid": [
+        "scopus2-s2.0-85028322485"
+      ],
+      "woscitedreferencescount": [
+        "23"
+      ],
+      "oa": [
+        "free_for_read"
+      ],
+      "scopuscitedreferencescount": [
+        "27"
+      ],
+      "woscitedreferencesoriginalsourcerecordid": [
+        "wos000412948000009"
+      ],
+      "rights": [
+        "The Author(s) 2017",
+        "Copyright 2017 Elsevier B.V., All rights reserved.",
+        "COPYRIGHT 2017 Springer",
+        "Animal Cognition is a copyright of Springer, 2017."
+      ],
+      "lds50": [
+        "peer_reviewed"
+      ],
+      "cites": [
+        "FETCH-LOGICAL-c538t-359bef75cb74db2285723d2e28a3ca3d6bb5b79798db2802da0c82793f5fd4a53"
+      ],
+      "publisher": [
+        "Berlin/Heidelberg: Springer Berlin Heidelberg"
+      ]
+    },
+    "control": {
+      "recordid": [
+        "TN_cdi_scopus_primary_2_s2_0_85028322485"
+      ],
+      "sourceid": [
+        "gale_scopu"
+      ],
+      "galeid": [
+        "A509486020"
+      ],
+      "recordtype": [
+        "article"
+      ],
+      "originalsourceid": [
+        "FETCH-LOGICAL-c538t-359bef75cb74db2285723d2e28a3ca3d6bb5b79798db2802da0c82793f5fd4a53"
+      ],
+      "sourceformat": [
+        "XML"
+      ],
+      "pqid": [
+        "1951218667"
+      ],
+      "sourcetype": [
+        "Open Access Repository"
+      ],
+      "sourcerecordid": [
+        "A509486020"
+      ],
+      "sourcesystem": [
+        "PC"
+      ],
+      "addsrcrecordid": [
+        "eNqNkl1rFDEUhgdR7If9Ad5ooDctOprPSeZGWAa_oKAXeh0ymcw2JZusSWbb_nsz7HZbC0JzkQTO856cnPccVSdqypfGZ6tVNkNVvUbwA4KQf0zzjmqIeI0Qbmr8rDpElLC6pax5vr9TcVAdpXQFIRS0RS-rAywEhRSywyp2IaxNVNluDFjH0DuzAim4jfVLYD1YWuUzCDmbmMDZz3IEP0UF-qiSddb4ZNM5UH4Ai1RQkFbKuVo7dW2GvWwR_O0N0NabaNT5q-rFqFwyJ7vzuPr95fOv7lt98ePr925xUWtGRK4Ja3szcqZ7ToceY8E4JgM2WCiiFRmavmc9b3krSlRAPCioBeYtGdk4UMXIcfVpm3c99Ssz6NLBqJxcR7tS8VYGZeW_EW8v5TJsJGso5BSXBGe7BDH8mUzKcmWTNs4pb8KUJGoJFhQ1vCno6SP0KkzRl-8ViiGMRNPwe2qpnJHWj6G8q-ekcsFgS0UDMSwU2lI6hpSiGfclIyhnx-XWd1l8l7Pvci71zcO_7hV3Rhfg3Ra4Nn0Yky7OabPHymRQhEsBcF5tocXT6c7mMj7Bd2HyuUjfbqVJh3Vp0p2oQQUnoqX3bX1EYJmwhFIwiAXBmIq56vdPRGW-md_GO7yAfmniAxf-27q_UEMEgg"
+      ]
+    },
+    "links": {
+      "openurl": [
+        "$$Topenurl_article"
+      ],
+      "thumbnail": [
+        "$$Tsyndetics_thumb_exl"
+      ],
+      "backlink": [
+        "$$Uhttps://www.ncbi.nlm.nih.gov/pubmed/28840405$$D View this record in MEDLINE/PubMed$$Hfree_for_read"
+      ],
+      "linktopdf": [
+        "$$Uhttps://link.springer.com/content/pdf/10.1007/s10071-017-1126-2$$EPDF$$P50$$Gspringer$$Hfree_for_read"
+      ],
+      "linktohtml": [
+        "$$Uhttps://link.springer.com/10.1007/s10071-017-1126-2$$EHTML$$P50$$Gspringer$$Hfree_for_read"
+      ],
+      "openurlfulltext": [
+        "$$Topenurlfull_article"
+      ]
+    },
+    "sort": {
+      "creationdate": [
+        "20171101"
+      ],
+      "author": [
+        "Schmelz, Martin ; Duguid, Shona ; Bohn, Manuel ; Völter, Christoph J."
+      ],
+      "title": [
+        "Cooperative problem solving in giant otters (Pteronura brasiliensis) and Asian small-clawed otters (Aonyx cinerea)"
+      ]
+    },
+    "addata": {
+      "date": [
+        "2017-11-01"
+      ],
+      "notes": [
+        "ObjectType-Article-1",
+        "SourceType-Scholarly Journals-1",
+        "ObjectType-Feature-2"
+      ],
+      "cop": [
+        "Berlin/Heidelberg"
+      ],
+      "spage": [
+        "1107"
+      ],
+      "atitle": [
+        "Cooperative problem solving in giant otters (Pteronura brasiliensis) and Asian small-clawed otters (Aonyx cinerea)"
+      ],
+      "oa": [
+        "free_for_read"
+      ],
+      "pages": [
+        "1107-1114"
+      ],
+      "stitle": [
+        "Anim Cogn",
+        "ANIM COGN"
+      ],
+      "orcidid": [
+        "https://orcid.org/0000-0003-4844-0673",
+        "https://orcid.org/0000-0002-3536-8177",
+        "https://orcid.org/0000-0001-6006-1348"
+      ],
+      "genre": [
+        "article"
+      ],
+      "tpages": [
+        "8"
+      ],
+      "jtitle": [
+        "Animal cognition"
+      ],
+      "issue": [
+        "6"
+      ],
+      "format": [
+        "journal"
+      ],
+      "ristype": [
+        "JOUR"
+      ],
+      "eissn": [
+        "1435-9456"
+      ],
+      "abstract": [
+        "Cooperative problem solving has gained a lot of attention over the past two decades, but the range of species studied is still small. This limits the possibility of understanding the evolution of the socio-cognitive underpinnings of cooperation. Lutrinae show significant variations in socio-ecology, but their cognitive abilities are not well studied. In the first experimental study of otter social cognition, we presented two species\u2014giant otters and Asian small-clawed otters\u2014with a cooperative problem-solving task. The loose string task requires two individuals to simultaneously pull on either end of a rope in order to access food. This task has been used with a larger number of species (for the most part primates and birds) and thus allows for wider cross-species comparison. We found no differences in performance between species. Both giant otters and Asian small-clawed otters were able to solve the task successfully when the coordination requirements were minimal. However, when the temporal coordination demands were increased, performance decreased either due to a lack of understanding of the role of a partner or due to difficulty inhibiting action. In conclusion, two species of otters show some ability to cooperate, quite similar to most other species presented with the same task. However, to draw further conclusions and more nuanced comparisons between the two otter species, further studies with varied methodologies will be necessary."
+      ],
+      "pmid": [
+        "28840405"
+      ],
+      "addtitle": [
+        "Anim Cogn"
+      ],
+      "volume": [
+        "20"
+      ],
+      "au": [
+        "Schmelz, Martin",
+        "Duguid, Shona",
+        "Bohn, Manuel",
+        "Völter, Christoph J."
+      ],
+      "issn": [
+        "1435-9448"
+      ],
+      "epage": [
+        "1114"
+      ],
+      "risdate": [
+        "2017"
+      ],
+      "pub": [
+        "Springer Berlin Heidelberg"
+      ],
+      "doi": [
+        "10.1007/s10071-017-1126-2"
+      ]
+    },
+    "facets": {
+      "frbrtype": [
+        "5"
+      ],
+      "creatorcontrib": [
+        "Schmelz, Martin",
+        "Duguid, Shona",
+        "Bohn, Manuel",
+        "Völter, Christoph J."
+      ],
+      "creationdate": [
+        "2017"
+      ],
+      "toplevel": [
+        "peer_reviewed",
+        "online_resources"
+      ],
+      "frbrgroupid": [
+        "cdi_FETCH-LOGICAL-c538t-359bef75cb74db2285723d2e28a3ca3d6bb5b79798db2802da0c82793f5fd4a53"
+      ],
+      "rsrctype": [
+        "articles"
+      ],
+      "topic": [
+        "Analysis",
+        "Animal cognition",
+        "Animals",
+        "Asian small-clawed otter",
+        "Behavioral Sciences",
+        "Biomedical and Life Sciences",
+        "Birds",
+        "Cognition",
+        "Cognitive ability",
+        "Cooperation",
+        "Ecological monitoring",
+        "Ecology",
+        "Evolution",
+        "Female",
+        "Giant otter",
+        "Life Sciences",
+        "Life Sciences & Biomedicine",
+        "Loose string task",
+        "Lutrinae",
+        "Male",
+        "Mammals",
+        "Original Paper",
+        "Otters",
+        "Otters - psychology",
+        "Primates",
+        "Problem Solving",
+        "Psychology Research",
+        "Science & Technology",
+        "Social Behavior",
+        "Social cognition",
+        "Social interactions",
+        "Species",
+        "Zoology"
+      ],
+      "language": [
+        "eng"
+      ],
+      "collection": [
+        "Springer Nature OA Free Journals",
+        "Scopus",
+        "Web of Science Core Collection",
+        "Science Citation Index Expanded",
+        "Web of Science - Science Citation Index Expanded - 2017",
+        "Medline",
+        "MEDLINE",
+        "MEDLINE (Ovid)",
+        "MEDLINE",
+        "MEDLINE",
+        "PubMed",
+        "CrossRef",
+        "ProQuest Central (Corporate)",
+        "Animal Behavior Abstracts",
+        "Ecology Abstracts",
+        "Neurosciences Abstracts",
+        "Health & Medical Collection",
+        "ProQuest Central (purchase pre-March 2016)",
+        "Medical Database (Alumni Edition)",
+        "Psychology Database (Alumni)",
+        "Hospital Premium Collection",
+        "Hospital Premium Collection (Alumni Edition)",
+        "ProQuest Central (Alumni) (purchase pre-March 2016)",
+        "Research Library (Alumni Edition)",
+        "Health & Medical Collection - hybrid linking",
+        "ProQuest Central Korea - hybrid linking",
+        "ProQuest Central (Alumni)",
+        "Psychology Database - hybrid linking",
+        "Health Research Premium Collection (Alumni) - hybrid linking",
+        "Psychology Database (Alumni) - hybrid linking",
+        "ProQuest Central (Alumni) - hybrid linking",
+        "Health Research Premium Collection - hybrid linking",
+        "ProQuest Central",
+        "ProQuest Central Student - hybrid linking",
+        "ProQuest Central Essentials - hybrid linking",
+        "Health & Medical Collection (Alumni) - hybrid linking",
+        "ProQuest One Psychology - hybrid linking",
+        "ProQuest Central Essentials",
+        "ProQuest Central",
+        "Environmental Sciences and Pollution Management",
+        "ProQuest Central Korea",
+        "Health Research Premium Collection",
+        "Health Research Premium Collection (Alumni)",
+        "ProQuest Central Student",
+        "Research Library Prep",
+        "ProQuest Health & Medical Complete (Alumni)",
+        "Health & Medical Collection (Alumni Edition)",
+        "Medical Database",
+        "Psychology Database",
+        "ProQuest research library",
+        "Research Library (Corporate)",
+        "ProQuest Central - hybrid linking",
+        "ProQuest One Academic Eastern Edition (DO NOT USE)",
+        "ProQuest One Academic",
+        "ProQuest One Academic UKI Edition",
+        "ProQuest Central China",
+        "Research Library - hybrid linking",
+        "ProQuest One Psychology",
+        "ProQuest Central Basic",
+        "MEDLINE - Academic",
+        "PubMed Central (Full Participant titles)"
+      ],
+      "jtitle": [
+        "Animal cognition"
+      ],
+      "prefilter": [
+        "articles"
+      ]
+    }
+  },
+  "@id": "http://bc-primo.hosted.exlibrisgroup.com/primo_library/libweb/webservices/rest/primo-explore/v1/pnxs/PC/TN_cdi_scopus_primary_2_s2_0_85028322485"
+}

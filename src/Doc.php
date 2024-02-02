@@ -37,6 +37,7 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  * @property string creator
  * @property string[] contributors
  * @property string date
+ * @property string sort_date
  * @property string publisher
  * @property string abstract
  * @property string type
@@ -64,6 +65,11 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  * @property Holding[] holdings
  * @property string[] journal_title
  * @property string[] is_part_of
+ * @property string[] top_level_facets
+ * @property string[] source_type
+ * @property bool is_peer_reviewed
+ * @property bool is_online_resource
+ * @property bool is_open_access
  *
  * @package BCLib\PrimoClient
  */
@@ -257,6 +263,22 @@ class Doc
      * @var bool
      */
     protected $_available;
+
+    /**
+     * @var string[]
+     */
+    protected array $_top_level_facets = [];
+
+    protected bool $_is_peer_reviewed = false;
+
+    protected bool $_is_online_resource = false;
+
+    protected bool $_is_open_access = false;
+
+    /**
+     * @var string[]
+     */
+    protected array $_source_type = [];
 
     /**
      * Doc constructor.
@@ -525,6 +547,34 @@ class Doc
         return $this->_holdings;
     }
 
+    /**
+     * @return string[]
+     */
+    public function getTopLevelFacets(): array
+    {
+        return $this->_top_level_facets;
+    }
+
+    public function isPeerReviewed(): bool
+    {
+        return in_array('peer_reviewed', $this->getTopLevelFacets());
+    }
+
+    public function isOnlineResource(): bool
+    {
+        return in_array('online_resources', $this->getTopLevelFacets());
+    }
+
+    public function getSourceType(): array
+    {
+        return $this->_source_type;
+    }
+
+    public function isOpenAccess(): bool
+    {
+        return $this->_is_open_access;
+    }
+
     public function setId(?string $id): void
     {
         $this->_id = $id;
@@ -756,5 +806,18 @@ class Doc
             $result[$matches[2]] = $matches[1];
         }
         return $result;
+    }
+
+    public function setTopLevelFacets(array $top_level_facets): void
+    {
+        $this->_top_level_facets = $top_level_facets;
+        $this->_is_peer_reviewed = in_array('peer_reviewed', $top_level_facets);
+        $this->_is_online_resource = in_array('online_resources', $top_level_facets);
+    }
+
+    public function setSourceType(array $source_type): void
+    {
+        $this->_source_type = $source_type;
+        $this->_is_open_access = in_array('Open Access Repository', $source_type);
     }
 }

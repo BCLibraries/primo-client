@@ -19,9 +19,20 @@ class DocTranslatorTest extends TestCase
         $expected_subjects = ['United States. Constitution', 'Constitutional history–United States'];
         $this->assertEquals($expected_subjects, $doc->subjects);
 
+        $expected_top_level = ['available', 'online_resources'];
+        $this->assertEquals($expected_top_level, $doc->top_level_facets);
+
         $this->assertTrue($doc->is_electronic);
         $this->assertTrue($doc->is_physical);
         $this->assertFalse($doc->is_digital);
+    }
+
+    public function testParsePCIRecord() {
+        $json = file_get_contents(__DIR__ . '/doc-pci-cooperative-problem-solving-otters.json');
+        $doc = DocTranslator::translate(json_decode($json, false));
+        $this->assertTrue($doc->isPeerReviewed());
+        $this->assertTrue($doc->isOnlineResource());
+        $this->assertTrue($doc->isOpenAccess());
     }
 
     public function testParsesLinks(): void
@@ -101,6 +112,5 @@ class DocTranslatorTest extends TestCase
             )
         ];
         $this->assertEquals($expected_holdings, $doc->holdings);
-
     }
 }

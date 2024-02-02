@@ -95,6 +95,8 @@ class DocTranslator
         $doc->format = empty($display->format) ? null : $display->format[0];
         $doc->description = $display->description ?? [];
         $doc->subjects = $facets->topic ?? [];
+        $doc->top_level_facets = $facets->toplevel ?? [];
+        $doc->source_type = $control->sourcetype ?? [];
         $doc->genres = $facets->genre ?? [];
         $doc->languages = $facets->language ?? [];
         $doc->contributors = $display->contributor ?? [];
