@@ -782,6 +782,22 @@ class Doc
         $this->_available = $availble;
     }
 
+    public function setTopLevelFacets(array $top_level_facets): void
+    {
+        $this->_top_level_facets = $top_level_facets;
+        $this->_is_peer_reviewed = in_array('peer_reviewed', $top_level_facets);
+        $this->_is_online_resource = in_array('online_resources', $top_level_facets);
+    }
+
+    public function setSourceType(array $source_type): void
+    {
+        $this->_source_type = $source_type;
+    }
+
+    public function setIsOpenAccess(bool $is_open_access):void {
+        $this->_is_open_access = $is_open_access;
+    }
+
 
     /**
      * Read a multi-item PNX entries
@@ -806,18 +822,5 @@ class Doc
             $result[$matches[2]] = $matches[1];
         }
         return $result;
-    }
-
-    public function setTopLevelFacets(array $top_level_facets): void
-    {
-        $this->_top_level_facets = $top_level_facets;
-        $this->_is_peer_reviewed = in_array('peer_reviewed', $top_level_facets);
-        $this->_is_online_resource = in_array('online_resources', $top_level_facets);
-    }
-
-    public function setSourceType(array $source_type): void
-    {
-        $this->_source_type = $source_type;
-        $this->_is_open_access = in_array('Open Access Repository', $source_type);
     }
 }

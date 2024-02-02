@@ -97,6 +97,7 @@ class DocTranslator
         $doc->subjects = $facets->topic ?? [];
         $doc->top_level_facets = $facets->toplevel ?? [];
         $doc->source_type = $control->sourcetype ?? [];
+        $doc->is_open_access = isset($addata->oa);
         $doc->genres = $facets->genre ?? [];
         $doc->languages = $facets->language ?? [];
         $doc->contributors = $display->contributor ?? [];

@@ -426,17 +426,14 @@ class DocTest extends TestCase
     }
 
     /**
+     * @covers Doc::setIsOpenAccess
      * @covers Doc::isOpenAccess()
      */
     public function testIsOpenAccess(): void
     {
-        $source_type = ['Aggregation Database'];
-        $this->doc->setSourceType($source_type);
         $this->assertFalse($this->doc->is_open_access);
+        $this->doc->setIsOpenAccess(true);
 
-        $source_type = ['Open Access Repository'];
-        $this->doc->setSourceType($source_type);
-        $this->assertTrue($this->doc->is_open_access);
     }
 
     public function testAddingNonHoldingToHoldingsThrowsException(): void

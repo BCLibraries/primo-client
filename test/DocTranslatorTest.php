@@ -32,7 +32,7 @@ class DocTranslatorTest extends TestCase
         $doc = DocTranslator::translate(json_decode($json, false));
         $this->assertTrue($doc->isPeerReviewed());
         $this->assertTrue($doc->isOnlineResource());
-        $this->assertTrue($doc->isOpenAccess());
+        $this->assertTrue($doc->is_open_access);
     }
 
     public function testParsesLinks(): void
