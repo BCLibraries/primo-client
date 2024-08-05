@@ -72,7 +72,7 @@ class PrimoClient
      * @throws Exceptions\BadAPIResponseException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function search($request, QueryConfig $config = null): SearchResponse
+    public function search(SearchRequest|string $request, QueryConfig $config = null): SearchResponse
     {
         $config = $config ?? $this->config;
 

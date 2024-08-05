@@ -45,6 +45,7 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  * @property string[] issn
  * @property string[] oclcid
  * @property string display_subject
+ * @property string[] subjects
  * @property string[] genres
  * @property string[] creator_facet
  * @property string[] collection_facet
@@ -70,6 +71,7 @@ use BCLib\PrimoClient\Exceptions\InvalidArgumentException;
  * @property bool is_peer_reviewed
  * @property bool is_online_resource
  * @property bool is_open_access
+ * @property string[] mms
  *
  * @package BCLib\PrimoClient
  */
@@ -279,6 +281,11 @@ class Doc
      * @var string[]
      */
     protected array $_source_type = [];
+
+    /**
+     * @var string[]
+     */
+    protected array $_mms = [];
 
     /**
      * Doc constructor.
@@ -570,6 +577,11 @@ class Doc
         return $this->_source_type;
     }
 
+    public function getMms(): array
+    {
+        return $this->_mms;
+    }
+
     public function isOpenAccess(): bool
     {
         return $this->_is_open_access;
@@ -792,6 +804,11 @@ class Doc
     public function setSourceType(array $source_type): void
     {
         $this->_source_type = $source_type;
+    }
+
+    public function setMms(array $mms): void
+    {
+        $this->_mms = $mms;
     }
 
     public function setIsOpenAccess(bool $is_open_access):void {

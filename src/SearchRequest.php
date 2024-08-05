@@ -55,7 +55,7 @@ class SearchRequest
     {
         $this->params = [
             'apikey' => $config->apikey,
-            'vid' => $config->vid,
+            'vid' => "{$config->inst}:{$config->vid}",
             'tab' => $config->tab,
             'scope' => $config->scope,
             'inst' => $config->inst,

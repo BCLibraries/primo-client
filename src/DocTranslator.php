@@ -77,7 +77,6 @@ class DocTranslator
     {
         $control = $doc->json->pnx->control;
         $display = $doc->json->pnx->display;
-        $search = $doc->json->pnx->search;
         $addata = $doc->json->pnx->addata;
         $facets = $doc->json->pnx->facets;
         $sort = $doc->json->pnx->sort;
@@ -88,23 +87,25 @@ class DocTranslator
         $doc->publisher = empty($addata->pub) ? null : $addata->pub[0];
         $doc->abstract = empty($addata->abstract) ? null : $addata->abstract[0];
         $doc->type = empty($display->type) ? null : $display->type[0];
-        $doc->isbn = $search->isbn ?? [];
-        $doc->issn = $search->issn ?? [];
+        $doc->mms = $display->mms ?? [];
+        $doc->isbn = $addata->isbn ?? [];
+        $doc->issn = $addata->issn ?? [];
         $doc->oclcid = $addata->oclcid ?? [];
         $doc->display_subject = empty($display->subject) ? null : $display->subject[0];
         $doc->format = empty($display->format) ? null : $display->format[0];
         $doc->description = $display->description ?? [];
-        $doc->subjects = $facets->topic ?? [];
+        $doc->subjects = $display->topic ?? [];
         $doc->top_level_facets = $facets->toplevel ?? [];
         $doc->source_type = $control->sourcetype ?? [];
         $doc->is_open_access = isset($addata->oa);
-        $doc->genres = $facets->genre ?? [];
-        $doc->languages = $facets->language ?? [];
+        $doc->genres = $addata->genre ?? [];
+        $doc->languages = $display->language ?? [];
         $doc->contributors = $display->contributor ?? [];
         $doc->cover_images = [];
 
         $doc->creator = empty($display->creator) ? null : $display->creator[0];
 
+        // @todo Will these facets be available via API from VE when disableSplitFacets = false?
         $doc->creator_facet = $facets->creatorcontrib ?? [];
         $doc->collection_facet = $facets->collection ?? [];
         $doc->resourcetype_facet = $facets->rsrctype ?? [];
