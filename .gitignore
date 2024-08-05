@@ -3,3 +3,6 @@ vendor
 
 # PHPUnit cache files
 .phpunit.result.cache
+
+# IntelliJ IDE configuration files
+.idea
