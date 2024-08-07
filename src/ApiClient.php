@@ -8,12 +8,14 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\TransferException;
 use GuzzleHttp\Psr7\Request;
 
+/**
+ * Client for Primo API
+ *
+ * The API client handles the actual HTTP call. It doesn't deal with the requests at a higher level.
+ */
 class ApiClient
 {
-    /**
-     * @var Client
-     */
-    private $guzzle;
+    private Client $guzzle;
 
     /**
      * ApiClient constructor.
@@ -23,7 +25,6 @@ class ApiClient
      *     $guzzle = new Client(['base_uri' => $gateway_base_uri]);
      *     $api = new ApiClient($guzzle);
      *
-     * @param Client $guzzle
      */
     public function __construct(Client $guzzle)
     {
@@ -38,9 +39,14 @@ class ApiClient
      * @throws BadAPIResponseException
      * @throws GuzzleException
      */
-    public function get(string $url)
+    public function get(string $url): mixed
     {
-        $request = new Request('GET', $url);
+        $request = new Request('GET', $url, [
+            'headers' => [
+                'Accept' => 'application/json'
+            ]
+        ]);
+
         try {
             $response = $this->guzzle->send($request);
         } catch (TransferException $e) {

@@ -17,15 +17,9 @@ use GuzzleHttp\Client;
  */
 class PrimoClient
 {
-    /**
-     * @var ApiClient
-     */
-    private $api_client;
+    private ApiClient $api_client;
 
-    /**
-     * @var QueryConfig
-     */
-    private $config;
+    private ?QueryConfig $config;
 
     public function __construct(ApiClient $api_client, QueryConfig $config = null)
     {
