@@ -46,7 +46,7 @@ class DocTranslator
         $doc->setLinkToResource($doc->links['linktorsrc'] ?? []);
         $doc->setOpenurl($doc->links['openurl'] ?? []);
         $doc->setOpenurlFulltext($doc->links['openurlfulltext'] ?? []);
-        $doc->setCoverImages($processed_links['thumbnail']);
+        $doc->setCoverImages($processed_links['thumbnail'] ?? []);
     }
 
     private static function processHoldings(Doc $doc): void
