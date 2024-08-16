@@ -51,9 +51,13 @@ class DocTranslator
 
     private static function processHoldings(Doc $doc): void
     {
-        $json = $doc->json;
+        // Quit early if there are no holdings.
+        if (is_null($doc->json->delivery->holding)) {
+            return;
+        }
         $holdings = [];
-        foreach ($json->delivery->holding as $holding) {
+
+        foreach ($doc->json->delivery->holding as $holding) {
             $holdings[] = new Holding(
                 $holding->ilsApiId,
                 $holding->libraryCode,
