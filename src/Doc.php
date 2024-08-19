@@ -695,6 +695,9 @@ class Doc
     public function setCoverImages(?array $cover_images): void
     {
         $cover_images = array_filter($cover_images, function ($cover_image) {
+            if (! is_string($cover_image)) {
+                $cover_image = $cover_image->getUrl();
+            }
             return ! str_contains($cover_image, 'books.google.com');
         });
         $this->_cover_images = $cover_images;
