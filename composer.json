@@ -3,7 +3,6 @@
   "description": "A client for Ex Libris' Primo REST API",
   "minimum-stability": "stable",
   "license": "MIT",
-  "version": "0.9.1",
   "authors": [
     {
       "name": "Ben Florin",
